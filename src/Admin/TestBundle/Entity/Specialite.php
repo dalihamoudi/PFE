@@ -1,0 +1,557 @@
+<?php
+
+namespace Admin\TestBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Specialite
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Admin\TestBundle\Entity\SpecialiteRepository")
+ */
+class Specialite
+{
+    /**
+     * @ORM\OneToMany(targetEntity="Admin\TestBundle\Entity\DetailCmd",mappedBy="detail")
+     */
+    private $specialiteD;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Admin\TestBundle\Entity\Produit",mappedBy="specialiteP")
+     */
+    private $specialiteP;
+
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="PCT", type="string", length=20)
+     */
+    private $pCT;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="lib", type="string", length=255)
+     */
+    private $lib;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DateLunch", type="date")
+     */
+    private $dateLunch;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DateAMM", type="date")
+     */
+    private $dateAMM;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="AMM", type="string", length=20)
+     */
+    private $aMM;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DateSuppAmm", type="date")
+     */
+    private $dateSuppAmm;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="UCD", type="integer")
+     */
+    private $uCD;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="EGA", type="boolean")
+     */
+    private $eGA;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="Commercial", type="boolean")
+     */
+    private $commercial;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="PGHT", type="decimal")
+     */
+    private $pGHT;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="PPUB", type="decimal")
+     */
+    private $pPUB;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="PGRO", type="decimal")
+     */
+    private $pGRO;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="Etat", type="boolean")
+     */
+    private $etat;
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set pCT
+     *
+     * @param string $pCT
+     *
+     * @return Specialite
+     */
+    public function setPCT($pCT)
+    {
+        $this->pCT = $pCT;
+
+        return $this;
+    }
+
+    /**
+     * Get pCT
+     *
+     * @return string
+     */
+    public function getPCT()
+    {
+        return $this->pCT;
+    }
+
+    /**
+     * Set lib
+     *
+     * @param string $lib
+     *
+     * @return Specialite
+     */
+    public function setLib($lib)
+    {
+        $this->lib = $lib;
+
+        return $this;
+    }
+
+    /**
+     * Get lib
+     *
+     * @return string
+     */
+    public function getLib()
+    {
+        return $this->lib;
+    }
+
+    /**
+     * Set dateLunch
+     *
+     * @param \DateTime $dateLunch
+     *
+     * @return Specialite
+     */
+    public function setDateLunch($dateLunch)
+    {
+        $this->dateLunch = $dateLunch;
+
+        return $this;
+    }
+
+    /**
+     * Get dateLunch
+     *
+     * @return \DateTime
+     */
+    public function getDateLunch()
+    {
+        return $this->dateLunch;
+    }
+
+    /**
+     * Set dateAMM
+     *
+     * @param \DateTime $dateAMM
+     *
+     * @return Specialite
+     */
+    public function setDateAMM($dateAMM)
+    {
+        $this->dateAMM = $dateAMM;
+
+        return $this;
+    }
+
+    /**
+     * Get dateAMM
+     *
+     * @return \DateTime
+     */
+    public function getDateAMM()
+    {
+        return $this->dateAMM;
+    }
+
+    /**
+     * Set aMM
+     *
+     * @param string $aMM
+     *
+     * @return Specialite
+     */
+    public function setAMM($aMM)
+    {
+        $this->aMM = $aMM;
+
+        return $this;
+    }
+
+    /**
+     * Get aMM
+     *
+     * @return string
+     */
+    public function getAMM()
+    {
+        return $this->aMM;
+    }
+
+    /**
+     * Set dateSuppAmm
+     *
+     * @param \DateTime $dateSuppAmm
+     *
+     * @return Specialite
+     */
+    public function setDateSuppAmm($dateSuppAmm)
+    {
+        $this->dateSuppAmm = $dateSuppAmm;
+
+        return $this;
+    }
+
+    /**
+     * Get dateSuppAmm
+     *
+     * @return \DateTime
+     */
+    public function getDateSuppAmm()
+    {
+        return $this->dateSuppAmm;
+    }
+
+    /**
+     * Set uCD
+     *
+     * @param integer $uCD
+     *
+     * @return Specialite
+     */
+    public function setUCD($uCD)
+    {
+        $this->uCD = $uCD;
+
+        return $this;
+    }
+
+    /**
+     * Get uCD
+     *
+     * @return integer
+     */
+    public function getUCD()
+    {
+        return $this->uCD;
+    }
+
+    /**
+     * Set eGA
+     *
+     * @param boolean $eGA
+     *
+     * @return Specialite
+     */
+    public function setEGA($eGA)
+    {
+        $this->eGA = $eGA;
+
+        return $this;
+    }
+
+    /**
+     * Get eGA
+     *
+     * @return boolean
+     */
+    public function getEGA()
+    {
+        return $this->eGA;
+    }
+
+    /**
+     * Set commercial
+     *
+     * @param boolean $commercial
+     *
+     * @return Specialite
+     */
+    public function setCommercial($commercial)
+    {
+        $this->commercial = $commercial;
+
+        return $this;
+    }
+
+    /**
+     * Get commercial
+     *
+     * @return boolean
+     */
+    public function getCommercial()
+    {
+        return $this->commercial;
+    }
+
+    /**
+     * Set pGHT
+     *
+     * @param string $pGHT
+     *
+     * @return Specialite
+     */
+    public function setPGHT($pGHT)
+    {
+        $this->pGHT = $pGHT;
+
+        return $this;
+    }
+
+    /**
+     * Get pGHT
+     *
+     * @return string
+     */
+    public function getPGHT()
+    {
+        return $this->pGHT;
+    }
+
+    /**
+     * Set pPUB
+     *
+     * @param string $pPUB
+     *
+     * @return Specialite
+     */
+    public function setPPUB($pPUB)
+    {
+        $this->pPUB = $pPUB;
+
+        return $this;
+    }
+
+    /**
+     * Get pPUB
+     *
+     * @return string
+     */
+    public function getPPUB()
+    {
+        return $this->pPUB;
+    }
+
+    /**
+     * Set pGRO
+     *
+     * @param string $pGRO
+     *
+     * @return Specialite
+     */
+    public function setPGRO($pGRO)
+    {
+        $this->pGRO = $pGRO;
+
+        return $this;
+    }
+
+    /**
+     * Get pGRO
+     *
+     * @return string
+     */
+    public function getPGRO()
+    {
+        return $this->pGRO;
+    }
+
+    /**
+     * Set etat
+     *
+     * @param boolean $etat
+     *
+     * @return Specialite
+     */
+    public function setEtat($etat)
+    {
+        $this->etat = $etat;
+
+        return $this;
+    }
+
+    /**
+     * Get etat
+     *
+     * @return boolean
+     */
+    public function getEtat()
+    {
+        return $this->etat;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->specialite = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add specialite
+     *
+     * @param \Admin\TestBundle\Entity\DetailCmd $specialite
+     *
+     * @return Specialite
+     */
+    public function addSpecialite(\Admin\TestBundle\Entity\DetailCmd $specialite)
+    {
+        $this->specialite[] = $specialite;
+
+        return $this;
+    }
+
+    /**
+     * Remove specialite
+     *
+     * @param \Admin\TestBundle\Entity\DetailCmd $specialite
+     */
+    public function removeSpecialite(\Admin\TestBundle\Entity\DetailCmd $specialite)
+    {
+        $this->specialite->removeElement($specialite);
+    }
+
+    /**
+     * Get specialite
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getSpecialite()
+    {
+        return $this->specialite;
+    }
+
+    /**
+     * Add specialiteD
+     *
+     * @param \Admin\TestBundle\Entity\DetailCmd $specialiteD
+     *
+     * @return Specialite
+     */
+    public function addSpecialiteD(\Admin\TestBundle\Entity\DetailCmd $specialiteD)
+    {
+        $this->specialiteD[] = $specialiteD;
+
+        return $this;
+    }
+
+    /**
+     * Remove specialiteD
+     *
+     * @param \Admin\TestBundle\Entity\DetailCmd $specialiteD
+     */
+    public function removeSpecialiteD(\Admin\TestBundle\Entity\DetailCmd $specialiteD)
+    {
+        $this->specialiteD->removeElement($specialiteD);
+    }
+
+    /**
+     * Get specialiteD
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getSpecialiteD()
+    {
+        return $this->specialiteD;
+    }
+
+    /**
+     * Add specialiteP
+     *
+     * @param \Admin\TestBundle\Entity\Produit $specialiteP
+     *
+     * @return Specialite
+     */
+    public function addSpecialiteP(\Admin\TestBundle\Entity\Produit $specialiteP)
+    {
+        $this->specialiteP[] = $specialiteP;
+
+        return $this;
+    }
+
+    /**
+     * Remove specialiteP
+     *
+     * @param \Admin\TestBundle\Entity\Produit $specialiteP
+     */
+    public function removeSpecialiteP(\Admin\TestBundle\Entity\Produit $specialiteP)
+    {
+        $this->specialiteP->removeElement($specialiteP);
+    }
+
+    /**
+     * Get specialiteP
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getSpecialiteP()
+    {
+        return $this->specialiteP;
+    }
+}

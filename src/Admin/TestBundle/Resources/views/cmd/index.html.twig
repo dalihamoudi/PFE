@@ -1,0 +1,149 @@
+{% extends '::base.html.twig' %}
+
+
+{% block body -%}
+    <!-- WEB FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin,latin-ext,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css" />
+
+    <!-- CORE CSS -->
+    <link href="{{ asset('plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+
+    <!-- CSS DATATABLE -->
+    <link href="{{ asset('css/layout-datatable.css') }}" rel="stylesheet" type="text/css" />
+
+    <!-- THEME CSS -->
+    <link href="{{ asset('css/essentials.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/layout.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/color_scheme/green.css') }}" rel="stylesheet" type="text/css" id="color_scheme" />
+
+    <!-- JQGRID TABLE -->
+    <link href="{{ asset('plugins/jqgrid/css/ui.jqgrid.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/layout-jqgrid.css') }}" rel="stylesheet" type="text/css" />
+
+    <h1>Liste Des Commandes</h1>
+
+    <!-- Recuperation du Boutton Ajouter  -->
+    {{ render(controller('Admin\TestBundle:cmd:new')) }}
+
+    <!-- Right option -->
+    <div class="btn-group pull-right tabletools-topbar">
+        <a class="btn btn-sm btn-default DTTT_button_pdf" id="ToolTables_sample_1_0">
+            <span>PDF</span>
+            <div style="position: absolute; left: 0px; top: 0px; width: 45px; height: 32px; z-index: 99;">
+                <embed id="ZeroClipboard_TableToolsMovie_1" src="{{ asset('plugins/datatables/extensions/TableTools/swf/copy_csv_xls_pdf.swf') }}" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="45" height="32" name="ZeroClipboard_TableToolsMovie_1" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=1&amp;width=45&amp;height=32" wmode="transparent">
+            </div>
+        </a>
+        <a class="btn btn-sm btn-default DTTT_button_csv" id="ToolTables_sample_1_1">
+            <span>CSV</span>
+            <div style="position: absolute; left: 0px; top: 0px; width: 43px; height: 32px; z-index: 99;">
+                <embed id="ZeroClipboard_TableToolsMovie_2" src="{{ asset('plugins/datatables/extensions/TableTools/swf/copy_csv_xls_pdf.swf') }}" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="43" height="32" name="ZeroClipboard_TableToolsMovie_2" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=2&amp;width=43&amp;height=32" wmode="transparent">
+            </div>
+        </a>
+        <a class="btn btn-sm btn-default DTTT_button_xls" id="ToolTables_sample_1_2">
+            <span>Excel</span>
+            <div style="position: absolute; left: 0px; top: 0px; width: 51px; height: 32px; z-index: 99;">
+                <embed id="ZeroClipboard_TableToolsMovie_3" src="{{ asset('plugins/datatables/extensions/TableTools/swf/copy_csv_xls_pdf.swf') }}" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="51" height="32" name="ZeroClipboard_TableToolsMovie_3" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=3&amp;width=51&amp;height=32" wmode="transparent">
+            </div>
+        </a>
+        <a class="btn btn-sm btn-default DTTT_button_print" id="ToolTables_sample_1_3" title="View print view">
+            <span>Print</span>
+        </a>
+    </div>
+
+    <!-- Search -->
+    <input type="search" class="form-control input-small input-inline" aria-controls="sample_1" placeholder="Search ...">
+
+    <!-- Records -->
+    <label>
+        <select name="sample_1_length" aria-controls="sample_1" class="form-control input-xsmall input-inline" tabindex="-1">
+            <option value="5">5</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="-1">All</option>
+        </select>
+    </label>
+
+    <!-- Table -->
+    <table class="table table-striped table-bordered table-hover" id="sample_2">
+        <tr class="ui-jqgrid-labels" role="rowheader">
+            <th id="jqgrid_cb" role="columnheader" class="" style="width: 50px;">
+                <div id="jqgh_jqgrid_cb">
+
+                                    <span class="s-ico" style="display:none">
+                                        <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                        <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                    </span>
+                </div>
+            </th>
+            <th id="jqgrid_act" role="columnheader" style="width: 100px;color: black;">
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                <div id="jqgh_jqgrid_act" class="ui-jqgrid-sortable">Actions
+                    <span class="s-ico" style="display:none">
+                                        <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                        <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                    </span>
+                </div>
+            </th>
+            <th id="jqgrid_id" role="columnheader" style="width: 100px;color: black;>
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                <div id="jqgh_jqgrid_id" class="ui-jqgrid-sortable">ID CMD
+                    <span class="s-ico" style="">
+                                        <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                        <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                    </span>
+                </div>
+            </th>
+            <th id="jqgrid_date" role="columnheader" style="width: 100px;color: black;>
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                <div id="jqgh_jqgrid_date" class="ui-jqgrid-sortable">CLIENT
+                    <span class="s-ico" style="display:none">
+                        <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                        <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                    </span>
+                </div>
+            </th>
+            <th id="jqgrid_name" role="columnheader" style="width: 100px;color: black;>
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                <div id="jqgh_jqgrid_name" class="ui-jqgrid-sortable">ID DELEGUE
+                    <span class="s-ico" style="display:none">
+                                    <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                    <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                </span>
+                </div>
+
+            </th>
+            <th id="jqgrid_amount" role="columnheader" style="width: 100px;color: black;>
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                <div id="jqgh_jqgrid_amount" class="ui-jqgrid-sortable">DATE CMD
+                    <span class="s-ico" style="display:none">
+                                        <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                        <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                    </span>
+                </div>
+            </th>
+
+        </tr>
+
+        <tbody>
+
+        {% for entity in entities %}
+            <tr >
+                <td id="jqgrid_cb" role="columnheader" style="width: 50px;"><input type="checkbox" value="{{entity.id }}"></td>
+                <td id="jqgrid_cb" role="columnheader" style="width: 50px;">
+                    {{ render(controller('Admin\TestBundle:cmd:edit',{'id':entity.id})) }}
+                    <a href="{{ path('cmd_delete', { 'id': entity.id }) }}"><button class="glyphicon glyphicon-trash"></button></a>
+                </td>
+                <td id="jqgrid_cb" role="columnheader" style="width: 100px;">{{ entity.id }}</td>
+                <td id="jqgrid_cb" role="columnheader" style="width: 100px;">{{ entity.client.PFPharNom }}</td>
+                <td id="jqgrid_cb" role="columnheader" style="width: 100px;">{{entity.delgues.pFNom }} </td>
+                <td id="jqgrid_cb" role="columnheader" style="width: 135px;">{{ entity.PFCMDPHDate|date('Y-m-d H:i:s') }}</td>
+
+            </tr>
+
+        {% endfor %}
+
+        </tbody>
+    </table>
+
+    {% endblock %}
+

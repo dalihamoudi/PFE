@@ -1,0 +1,147 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+
+    <!-- WEB FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin,latin-ext,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css" />
+
+    <!-- CORE CSS -->
+    <link href="../../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- THEME CSS -->
+    <link href="../../assets/css/essentials.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+    <!-- JQGRID TABLE -->
+    <link href="../../assets/plugins/jqgrid/css/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/css/layout-jqgrid.css" rel="stylesheet" type="text/css" />
+
+
+    <h1>Diplome list</h1>
+
+    <table>
+        <thead>
+        <tr class="ui-jqgrid-labels" role="rowheader">
+            <th id="jqgrid_cb" role="columnheader" class="" style="width: 25px;">
+                <div id="jqgh_jqgrid_cb">
+
+                                    <span class="s-ico" style="display:none">
+                                        <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                        <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                    </span>
+                </div>
+            </th>
+            <th id="jqgrid_act" role="columnheader" class="" style="width: 59px;">
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                <div id="jqgh_jqgrid_act" class="ui-jqgrid-sortable">Actions
+                    <span class="s-ico" style="display:none">
+                                        <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                        <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                    </span>
+                </div>
+            </th>
+            <th id="jqgrid_id" role="columnheader" class="" style="width: 59px;">
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                <div id="jqgh_jqgrid_id" class="ui-jqgrid-sortable">Inv No
+                    <span class="s-ico" style="">
+                                        <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                        <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                    </span>
+                </div>
+            </th>
+            <th id="jqgrid_date" role="columnheader" class="" style="width: 59px;">
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                <div id="jqgh_jqgrid_date" class="ui-jqgrid-sortable">Date
+                    <span class="s-ico" style="display:none">
+                                    <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                    <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                </span>
+                </div>
+            </th>
+            <th id="jqgrid_name" role="columnheader" class="" style="width: 59px;">
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                <div id="jqgh_jqgrid_name" class="ui-jqgrid-sortable">Client<span class="s-ico" style="display:none">
+                                    <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                    <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                </span>
+                </div>
+
+            </th>
+            <th id="jqgrid_amount" role="columnheader" class="" style="width: 59px;">
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                <div id="jqgh_jqgrid_amount" class="ui-jqgrid-sortable">Amount<span class="s-ico" style="display:none">
+                                        <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                        <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                    </span>
+                </div>
+            </th>
+            <th id="jqgrid_tax" role="columnheader" class="" style="width: 59px;">
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                <div id="jqgh_jqgrid_tax" class="ui-jqgrid-sortable">Tax
+                    <span class="s-ico" style="display:none">
+                                            <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                            <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                        </span>
+                </div>
+            </th>
+            <th id="jqgrid_total" role="columnheader" class="" style="width: 59px;">
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                <div id="jqgh_jqgrid_total" class="ui-jqgrid-sortable">Total<span class="s-ico" style="display:none">
+                                    <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                    <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                </span>
+                </div>
+            </th>
+            <th id="jqgrid_note" role="columnheader" class="" style="width: 60px;">
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                <div id="jqgh_jqgrid_note" class="ui-jqgrid-sortable">Notes
+                    <span class="s-ico" style="display:none">
+                                        <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                        <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                    </span>
+                </div>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td><a href="{{ path('diplome_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.pHDiplomeLib }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('diplome_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('diplome_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('diplome_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+
+    <!-- JAVASCRIPT FILES -->
+    <script type="text/javascript">var plugin_path = 'assets/plugins/';</script>
+    <script type="text/javascript" src="../../assets/plugins/jquery/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/app.js"></script>
+
+    {% endblock %}

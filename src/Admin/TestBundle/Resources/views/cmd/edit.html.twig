@@ -1,0 +1,54 @@
+{% block body -%}
+
+    <button type="button" style="color: #0d6aad" class="glyphicon glyphicon-pencil" data-toggle="modal" data-target=".bs-example-modal-lg{{ entity.id }}"></button>
+
+    <div class="modal fade bs-example-modal-lg{{ entity.id }}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg{{ entity.id }}">
+            <div class="modal-content">
+
+                <!-- header modal -->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+
+                <!-- body modal -->
+                <div class="modal-body">
+                    <center><h1>Edit CMD</h1></center>
+                    {{ form_start(edit_form) }}
+                    <div>
+                        <center>
+                            <div>
+                                <label>Date</label>
+                                {{ form_widget(edit_form.pFCMDPHDate, {'attr': {'class': ''}}) }}
+                            </div>
+                        </center>
+                        <div>
+                            <label>Client</label>
+                            {{ form_widget(edit_form.client, {'attr': {'class': 'form-control pointer required'}}) }}
+                        </div>
+                        <div>
+                            <label>Delegue</label>
+                            {{ form_widget(edit_form.delgues, {'attr': {'class': 'form-control pointer required'}}) }}
+                        </div>
+                        <center>
+                            <p>
+                            <div>
+
+                                {{ form_widget(edit_form.submit, {'attr': {'class': 'btn btn-primary'}}) }}
+                            </div>
+                            </p>
+                        </center>
+                    </div>
+                    {{ form_rest(edit_form) }}
+                    {{ form_end(edit_form) }}
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}
+

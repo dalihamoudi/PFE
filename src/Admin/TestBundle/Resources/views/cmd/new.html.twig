@@ -1,0 +1,92 @@
+{% block body -%}
+    <button type="button" style="position: absolute;left: 85%;top: 11%;" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg1">Ajouter CMD</button>
+
+
+    <div class="modal fade bs-example-modal-lg1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg1">
+            <div class="modal-content">
+
+                <!-- header modal -->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+
+                <!-- body modal -->
+                <div class="modal-body">
+                    <center><h1>Creation CMD</h1></center>
+                    {{ form_start(form) }}
+                    <p>
+                        <center>
+                        <div>
+                            <label>Date</label>
+                            {{ form_widget(form.pFCMDPHDate, {'attr': {'class': ''}}) }}
+                        </div>
+                        </center>
+                        <div>
+                            <label>Client</label>
+                            {{ form_widget(form.client, {'attr': {'class': 'form-control pointer required'}}) }}
+                        </div>
+                        <div>
+                            <label>Delegue</label>
+                            {{ form_widget(form.delgues, {'attr': {'class': 'form-control pointer required'}}) }}
+                        </div>
+                        <p>
+                        <div>
+                            <table id="TableProduit" class="table table-striped table-bordered table-hover">
+                                <tr class="ui-jqgrid-labels">
+                                    <td>Produit</td>
+                                    <td>Quantité</td>
+                                    <td>Gadget</td>
+                                    <td>Quantité</td>
+                                    <td>
+                                            <button id="ajt" class="glyphicon glyphicon-plus" onclick="AjouterLigne()"> Ajouter </button><br>
+                                            <button class="glyphicon glyphicon-minus" onclick="SupprimerLigne()"> Supprimer </button>
+                                    </td>
+                                </tr>
+                                <tr id="ligne">
+                                    <td></td>
+                                    <td>aaaaaaaaaaaa</td>
+                                    <td>bbbbbbbbbbbbbb</td>
+                                    <td>bbbbbbbbbbbb</td>
+                                    <td>cccccccccccccc</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <center>
+                            <p>
+                        <div>
+
+                            {{ form_widget(form.submit, {'attr': {'class': 'btn btn-primary'}}) }}
+                        </div>
+                            </p>
+                        </center>
+                    </div>
+                    {{ form_rest(form) }}
+                    {{ form_end(form) }}
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+<script>
+    function AjouterLigne() {
+       // var ligne = document.createElement("tr");
+       // var table = document.getElementById("TableProduit");
+        // table.appendChild(ligne);
+//        document.getElementById("TableProduit").appendChild(ligne);
+
+        var x = document.createElement("tr");
+        var t = document.createTextNode("This is a paragraph.");
+        x.appendChild(t);
+        document.body.appendChild(x);
+
+//  var ligne = document.getElementById('ligne');
+//  document.getElementById("TableProduit").innerHTML = document.createElement("tr") ;
+    }
+    function SupprimerLigne() {
+
+    }
+</script>
+{% endblock %}
+

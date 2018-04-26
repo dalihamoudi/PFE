@@ -1,0 +1,82 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h2 style="color:rgba(11,8,18,0.99)">Do You Want To Delete This CMD ?</h2>
+
+    <table class="record_properties" style="position: relative;left:15%">
+        <tbody>
+        <tr class="ui-jqgrid-labels" role="rowheader">
+
+            <th id="jqgrid_id" role="columnheader" style="width: 100px;color: black;border-bottom: double;>
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+            <div id="jqgh_jqgrid_id" class="ui-jqgrid-sortable">ID CMD
+                <span class="s-ico" style="">
+                                        <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                        <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                    </span>
+            </div>
+            </th>
+            <th id="jqgrid_date" role="columnheader" style="width: 100px;color: black;border-bottom: double;>
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+            <div id="jqgh_jqgrid_date" class="ui-jqgrid-sortable">CLIENT
+                <span class="s-ico" style="display:none">
+                                    <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                    <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                </span>
+            </div>
+            </th>
+            <th id="jqgrid_name" role="columnheader" style="width: 100px;color: black;border-bottom: double;>
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+            <div id="jqgh_jqgrid_name" class="ui-jqgrid-sortable">ID DELEGUE
+                <span class="s-ico" style="display:none">
+                                    <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                    <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                </span>
+            </div>
+
+            </th>
+            <th id="jqgrid_amount" role="columnheader" style="width: 100px;color: black;border-bottom: double;>
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+            <div id="jqgh_jqgrid_amount" class="ui-jqgrid-sortable">DATE CMD
+                <span class="s-ico" style="display:none">
+                                        <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                        <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                    </span>
+            </div>
+            </th>
+
+        </tr>
+        <tr>
+            <th id="jqgrid_cb" role="columnheader" style="width: 100px;">{{ entity.id }}</th>
+            <th id="jqgrid_cb" role="columnheader" style="width: 100px;">{{ entity.client.PFPharNom }}</th>
+            <th id="jqgrid_cb" role="columnheader" style="width: 100px;">{{ entity.delgues.id }}</th>
+            <th id="jqgrid_cb" role="columnheader" style="width: 135px;">{{ entity.PFCMDPHDate|date('Y-m-d H:i:s') }}</th>
+
+        </tr>
+        </tbody>
+    </table>
+ <p>
+    <div>
+            <div class="col-sm-3">
+                <a href="{{ path('cmd') }}" class="btn btn-default btn-featured btn-inverse">
+                    <span>Cancel</span>
+                    <i class="glyphicon glyphicon-remove"></i>
+                </a>
+            </div>
+            <div class="col-sm-3">
+                <a href="" class="btn btn-danger btn-featured">
+                    <span>{{ form(delete_form) }}</span>
+                    <i class="glyphicon glyphicon-trash"></i>
+                </a>
+            </div>
+            <div class="col-sm-3">
+                <a href="{{ path('cmd_edit', { 'id': entity.id }) }}" class="btn btn-warning btn-featured">
+                    <span>Edit</span>
+                    <i class="glyphicon glyphicon-pencil"></i>
+                </a>
+            </div>
+    </div>
+
+
+
+{% endblock %}

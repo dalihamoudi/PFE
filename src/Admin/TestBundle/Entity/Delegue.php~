@@ -23,7 +23,7 @@ class Delegue
     private $id;
 
     /**
-     * @ORM\OneToMany(targetEntity="Admin\TestBundle\Entity\cmd",mappedBy="delegue")
+     * @ORM\OneToMany(targetEntity="Admin\TestBundle\Entity\cmd",mappedBy="delgues")
      */
     private $commandes;
 
@@ -490,7 +490,7 @@ class Delegue
     /**
      * Remove commande
      *
-     * @param \Admin\TestBundle\Entity\Commande_Pharmacie $commande
+     * @param \Admin\TestBundle\Entity\cmd $commande
      */
     public function removeCommande(\Admin\TestBundle\Entity\cmd $commande)
     {
@@ -506,4 +506,11 @@ class Delegue
     {
         return $this->commandes;
     }
+
+    public function __toString()
+    {
+        return $this->pFNom;
+    }
+
+
 }

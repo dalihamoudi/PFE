@@ -23,7 +23,7 @@ class Delegue
     private $id;
 
     /**
-     * @ORM\OneToMany(targetEntity="Admin\TestBundle\Entity\cmd",mappedBy="delegue")
+     * @ORM\OneToMany(targetEntity="Admin\TestBundle\Entity\cmd",mappedBy="delgues")
      */
     private $commandes;
 

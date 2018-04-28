@@ -27,9 +27,9 @@ class DetailCmd
 
 
     /**
-     * @ORM\OneToMany(targetEntity="Admin\TestBundle\Entity\cmd",mappedBy="detail")
+     * @ORM\ManyToOne(targetEntity="Admin\TestBundle\Entity\cmd",inversedBy="detail")
      */
-    private $cmddetail;
+    private $cmd;
 
 
     /**
@@ -294,5 +294,29 @@ class DetailCmd
     public function getSpecialites()
     {
         return $this->specialites;
+    }
+
+    /**
+     * Set specialitesD
+     *
+     * @param \Admin\TestBundle\Entity\DetailCmd $specialitesD
+     *
+     * @return DetailCmd
+     */
+    public function setSpecialitesD(\Admin\TestBundle\Entity\DetailCmd $specialitesD = null)
+    {
+        $this->specialitesD = $specialitesD;
+
+        return $this;
+    }
+
+    /**
+     * Get specialitesD
+     *
+     * @return \Admin\TestBundle\Entity\DetailCmd
+     */
+    public function getSpecialitesD()
+    {
+        return $this->specialitesD;
     }
 }

@@ -39,8 +39,8 @@
                                     <td>Gadget</td>
                                     <td>Quantité</td>
                                     <td>
-                                            <button id="ajt" class="glyphicon glyphicon-plus" onclick="AjouterLigne()"> Ajouter </button><br>
-                                            <button class="glyphicon glyphicon-minus" onclick="SupprimerLigne()"> Supprimer </button>
+                                            <a href="#" class="glyphicon glyphicon-plus">Add</a><br>
+                                            <a href="#" class="glyphicon glyphicon-minus">Remove</a>
                                     </td>
                                 </tr>
                                 <tr id="ligne">
@@ -69,24 +69,43 @@
             </div>
         </div>
     </div>
-<script>
-    function AjouterLigne() {
-       // var ligne = document.createElement("tr");
-       // var table = document.getElementById("TableProduit");
-        // table.appendChild(ligne);
-//        document.getElementById("TableProduit").appendChild(ligne);
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
 
-        var x = document.createElement("tr");
-        var t = document.createTextNode("This is a paragraph.");
-        x.appendChild(t);
-        document.body.appendChild(x);
+    <script>
 
-//  var ligne = document.getElementById('ligne');
-//  document.getElementById("TableProduit").innerHTML = document.createElement("tr") ;
-    }
-    function SupprimerLigne() {
+        /* add pizzas */
 
-    }
-</script>
+        var add = function() {
+
+            var index = $('table tbody tr').length + Math.floor((Math.random() * 100) + 1);
+            var row = $('script[type="text/html"]').text().replace(/__name__/g, index%2==0?index++:index--);
+            $('#NvRow').append(row);
+
+        };
+
+        $('table tbody a').live('click', function(event) {
+
+            if ($(this).text() === "Add") {
+
+                add();
+
+            }
+
+            if ($(this).text() === "Remove") {
+
+                $(this).closest('tr').remove();
+
+            }
+
+            event.preventDefault();
+
+        });
+
+        if ($('table tbody tr').length === 0) {
+
+            add();
+
+        }
+    </script>
 {% endblock %}
 

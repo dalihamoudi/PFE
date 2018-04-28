@@ -34,7 +34,7 @@ class cmd
     private $delgues;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Admin\TestBundle\Entity\DetailCmd",inversedBy="cmd")
+     * @ORM\OneToMany(targetEntity="Admin\TestBundle\Entity\DetailCmd",mappedBy="cmd")
      * @ORM\JoinColumn(nullable=true)
      */
     private $detail;
@@ -46,6 +46,14 @@ class cmd
      */
     private $pFCMDPHDate;
 
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->detail = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get id
@@ -130,50 +138,42 @@ class cmd
     }
 
     /**
-     * Set delgue
-     *
-     * @param \Admin\TestBundle\Entity\Delegue $delgue
-     *
-     * @return cmd
-     */
-    public function setDelgue(\Admin\TestBundle\Entity\Delegue $delgue = null)
-    {
-        $this->delgue = $delgue;
-
-        return $this;
-    }
-
-    /**
-     * Get delgue
-     *
-     * @return \Admin\TestBundle\Entity\Delegue
-     */
-    public function getDelgue()
-    {
-        return $this->delgue;
-    }
-
-    /**
-     * Set detail
+     * Add detail
      *
      * @param \Admin\TestBundle\Entity\DetailCmd $detail
      *
      * @return cmd
      */
-    public function setDetail(\Admin\TestBundle\Entity\DetailCmd $detail = null)
+    public function addDetail(\Admin\TestBundle\Entity\DetailCmd $detail)
     {
-        $this->detail = $detail;
+        $this->detail[] = $detail;
 
         return $this;
     }
 
     /**
+     * Remove detail
+     *
+     * @param \Admin\TestBundle\Entity\DetailCmd $detail
+     */
+    public function removeDetail(\Admin\TestBundle\Entity\DetailCmd $detail)
+    {
+        $this->detail->removeElement($detail);
+    }
+
+    /**
      * Get detail
      *
-     * @return \Admin\TestBundle\Entity\DetailCmd
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getDetail()
     {
         return $this->detail;
     }
+
+    public function __toString ()
+    {
+        return (string)$this->getId();
+    }
+
 }

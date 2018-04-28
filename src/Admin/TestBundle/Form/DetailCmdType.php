@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class cmdType extends AbstractType
+class DetailCmdType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -15,26 +15,24 @@ class cmdType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('pFCMDPHDate')
-            ->add('client')
-            ->add('delgues')
-            ->add('Detail', 'collection', array(
-                'type'      => new DetailCmdType(),
-                'allow_add' => true,
-                'prototype' => true,
-            ))
-
-            ->add('submit', 'submit', array('label' => 'Create'))
+            ->add('quantite')
+            ->add('gadgetQuantite')
+            ->add('pGHTActuel')
+            ->add('commentaire')
+            ->add('matMemoPGHTActuel')
+            ->add('grpProduit')
+            ->add('specialitesD')
+            ->add('cmd')
         ;
     }
-
+    
     /**
      * @param OptionsResolverInterface $resolver
      */
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Admin\TestBundle\Entity\cmd'
+            'data_class' => 'Admin\TestBundle\Entity\DetailCmd'
         ));
     }
 
@@ -43,6 +41,6 @@ class cmdType extends AbstractType
      */
     public function getName()
     {
-        return 'admin_testbundle_cmd';
+        return 'admin_testbundle_detailcmd';
     }
 }

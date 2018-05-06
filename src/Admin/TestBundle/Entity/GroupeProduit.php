@@ -14,9 +14,9 @@ class GroupeProduit
 {
 
     /**
-     * @ORM\OneToMany(targetEntity="Admin\TestBundle\Entity\DetailCmd",mappedBy="detail")
+     * @ORM\OneToMany(targetEntity="Admin\TestBundle\Entity\DetailCmd",mappedBy="$grpProduit")
      */
-    private $gpProduit;
+    private $GPdetail;
 
     /**
      * @ORM\ManyToOne(targetEntity="Admin\TestBundle\Entity\Produit",inversedBy="cmd")
@@ -261,4 +261,45 @@ class GroupeProduit
     {
         return $this->Produit;
     }
+
+    /**
+     * Add gPdetail
+     *
+     * @param \Admin\TestBundle\Entity\DetailCmd $gPdetail
+     *
+     * @return GroupeProduit
+     */
+    public function addGPdetail(\Admin\TestBundle\Entity\DetailCmd $gPdetail)
+    {
+        $this->GPdetail[] = $gPdetail;
+
+        return $this;
+    }
+
+    /**
+     * Remove gPdetail
+     *
+     * @param \Admin\TestBundle\Entity\DetailCmd $gPdetail
+     */
+    public function removeGPdetail(\Admin\TestBundle\Entity\DetailCmd $gPdetail)
+    {
+        $this->GPdetail->removeElement($gPdetail);
+    }
+
+    /**
+     * Get gPdetail
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getGPdetail()
+    {
+        return $this->GPdetail;
+    }
+
+    public function __toString ()
+    {
+        return (string)$this->getId();
+    }
+
+
 }

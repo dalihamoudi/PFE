@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Specialite
 {
     /**
-     * @ORM\OneToMany(targetEntity="Admin\TestBundle\Entity\DetailCmd",mappedBy="detail")
+     * @ORM\OneToMany(targetEntity="Admin\TestBundle\Entity\DetailCmd",mappedBy="specialitesD")
      */
     private $specialiteD;
 
@@ -554,4 +554,10 @@ class Specialite
     {
         return $this->specialiteP;
     }
+
+    public function __toString ()
+    {
+        return (string)$this->getId();
+    }
+
 }

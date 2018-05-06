@@ -13,13 +13,13 @@ use Doctrine\ORM\Mapping as ORM;
 class DetailCmd
 {
     /**
-     * @ORM\ManyToOne(targetEntity="Admin\TestBundle\Entity\DetailCmd",inversedBy="cmd")
+     * @ORM\ManyToOne(targetEntity="Admin\TestBundle\Entity\GroupeProduit",inversedBy="GPdetail")
      * @ORM\JoinColumn(nullable=true)
      */
     private $grpProduit;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Admin\TestBundle\Entity\DetailCmd",inversedBy="cmd")
+     * @ORM\ManyToOne(targetEntity="Admin\TestBundle\Entity\Specialite",inversedBy="specialiteD")
      * @ORM\JoinColumn(nullable=true)
      */
     private $specialitesD;
@@ -75,6 +75,13 @@ class DetailCmd
      * @ORM\Column(name="MatMemoPGHT_actuel", type="decimal")
      */
     private $matMemoPGHTActuel;
+
+
+
+    public function __toString ()
+    {
+      return $this->getCommentaire();
+    }
 
 
     /**
@@ -206,52 +213,11 @@ class DetailCmd
     {
         return $this->matMemoPGHTActuel;
     }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->cmddetail = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-
-    /**
-     * Add cmddetail
-     *
-     * @param \Admin\TestBundle\Entity\cmd $cmddetail
-     *
-     * @return DetailCmd
-     */
-    public function addCmddetail(\Admin\TestBundle\Entity\cmd $cmddetail)
-    {
-        $this->cmddetail[] = $cmddetail;
-
-        return $this;
-    }
-
-    /**
-     * Remove cmddetail
-     *
-     * @param \Admin\TestBundle\Entity\cmd $cmddetail
-     */
-    public function removeCmddetail(\Admin\TestBundle\Entity\cmd $cmddetail)
-    {
-        $this->cmddetail->removeElement($cmddetail);
-    }
-
-    /**
-     * Get cmddetail
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getCmddetail()
-    {
-        return $this->cmddetail;
-    }
 
     /**
      * Set grpProduit
      *
-     * @param \Admin\TestBundle\Entity\DetailCmd $grpProduit
+     * @param \²dmin\TestBundle\Entity\DetailCmd $grpProduit
      *
      * @return DetailCmd
      */
@@ -270,30 +236,6 @@ class DetailCmd
     public function getGrpProduit()
     {
         return $this->grpProduit;
-    }
-
-    /**
-     * Set specialites
-     *
-     * @param \Admin\TestBundle\Entity\DetailCmd $specialites
-     *
-     * @return DetailCmd
-     */
-    public function setSpecialites(\Admin\TestBundle\Entity\DetailCmd $specialites = null)
-    {
-        $this->specialites = $specialites;
-
-        return $this;
-    }
-
-    /**
-     * Get specialites
-     *
-     * @return \Admin\TestBundle\Entity\DetailCmd
-     */
-    public function getSpecialites()
-    {
-        return $this->specialites;
     }
 
     /**
@@ -318,5 +260,29 @@ class DetailCmd
     public function getSpecialitesD()
     {
         return $this->specialitesD;
+    }
+
+    /**
+     * Set cmd
+     *
+     * @param \Admin\TestBundle\Entity\cmd $cmd
+     *
+     * @return DetailCmd
+     */
+    public function setCmd(\Admin\TestBundle\Entity\cmd $cmd = null)
+    {
+        $this->cmd = $cmd;
+
+        return $this;
+    }
+
+    /**
+     * Get cmd
+     *
+     * @return \Admin\TestBundle\Entity\cmd
+     */
+    public function getCmd()
+    {
+        return $this->cmd;
     }
 }

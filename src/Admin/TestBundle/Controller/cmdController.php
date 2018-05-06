@@ -98,6 +98,25 @@ class cmdController extends Controller
             'form'   => $form->createView(),
         );
     }
+//this Route to Show Page_Ajouter with Design
+    /**
+     * Displays a form to create a new cmd entity.
+     *
+     * @Route("/newD", name="cmd_newD")
+     * @Method("GET")
+     * @Template()
+     */
+    public function newDAction()
+    {
+        $entity = new cmd();
+        $form   = $this->createCreateForm($entity);
+
+        return array(
+            'entity' => $entity,
+            'form'   => $form->createView(),
+        );
+    }
+
 
     /**
      * Finds and displays a cmd entity.

@@ -18,7 +18,7 @@ class cmdType extends AbstractType
             ->add('pFCMDPHDate')
             ->add('client')
             ->add('delgues')
-            ->add('Detail', 'collection', array(
+            ->add('detail', 'collection', array(
                 'type'      => new DetailCmdType(),
                 'allow_add' => true,
                 'prototype' => true,

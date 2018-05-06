@@ -131,7 +131,7 @@
                 <td id="jqgrid_cb" role="columnheader" style="width: 50px;"><input type="checkbox" value="{{entity.id }}"></td>
                 <td id="jqgrid_cb" role="columnheader" style="width: 50px;">
                     {{ render(controller('Admin\TestBundle:cmd:edit',{'id':entity.id})) }}
-                    <a href="{{ path('cmd_delete', { 'id': entity.id }) }}"><button class="glyphicon glyphicon-trash"></button></a>
+                    <a href="{{ path('cmd_delete',{'id': entity.id })}}"><button class="glyphicon glyphicon-trash"></button></a>
                 </td>
                 <td id="jqgrid_cb" role="columnheader" style="width: 100px;">{{ entity.id }}</td>
                 <td id="jqgrid_cb" role="columnheader" style="width: 100px;">{{ entity.client.PFPharNom }}</td>

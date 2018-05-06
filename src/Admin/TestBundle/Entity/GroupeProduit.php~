@@ -14,12 +14,12 @@ class GroupeProduit
 {
 
     /**
-     * @ORM\OneToMany(targetEntity="Admin\TestBundle\Entity\DetailCmd",mappedBy="detail")
+     * @ORM\OneToMany(targetEntity="Admin\TestBundle\Entity\DetailCmd",mappedBy="$grpProduit")
      */
-    private $gpProduit;
+    private $GPdetail;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Admin\TestBundle\Entity\GroupeProduit",inversedBy="cmd")
+     * @ORM\ManyToOne(targetEntity="Admin\TestBundle\Entity\Produit",inversedBy="cmd")
      * @ORM\JoinColumn(nullable=true)
      */
     private $Produit;
@@ -236,5 +236,29 @@ class GroupeProduit
     public function getGpProduit()
     {
         return $this->gpProduit;
+    }
+
+    /**
+     * Set produit
+     *
+     * @param \Admin\TestBundle\Entity\GroupeProduit $produit
+     *
+     * @return GroupeProduit
+     */
+    public function setProduit(\Admin\TestBundle\Entity\GroupeProduit $produit = null)
+    {
+        $this->Produit = $produit;
+
+        return $this;
+    }
+
+    /**
+     * Get produit
+     *
+     * @return \Admin\TestBundle\Entity\GroupeProduit
+     */
+    public function getProduit()
+    {
+        return $this->Produit;
     }
 }

@@ -46,12 +46,6 @@ class cmd
      */
     private $pFCMDPHDate;
 
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="comntr", type="string")
-     */
-    private $comntr;
 
     /**
      * Constructor
@@ -179,7 +173,7 @@ class cmd
 
     public function __toString ()
     {
-        return $this->getId();
+        return (string)$this->getId();
     }
 
 }

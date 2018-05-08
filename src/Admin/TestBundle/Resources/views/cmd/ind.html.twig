@@ -1,0 +1,21 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <!-- THEME CSS -->
+    <link href="{{ asset('css/ind.css') }}" rel="stylesheet" type="text/css" />
+    <center>
+    <div class="container" style="float: left">
+        <img src="{{ asset('images/cmd.jpg') }}" class="image" style="width:300px;height:400px">
+        <div class="middle">
+            <div class="text"><a href="{{ path('cmd') }}">Commande</a></div>
+        </div>
+    </div>
+
+    <div class="container" style="float: right">
+        <img src="{{ asset('images/budget.jpg') }}" class="image" style="width:300px;height:400px">
+        <div class="middle">
+            <div class="text"><a href="{{ path('budget') }}">Depence</a></div>
+        </div>
+    </div>
+    </center>
+{% endblock %}

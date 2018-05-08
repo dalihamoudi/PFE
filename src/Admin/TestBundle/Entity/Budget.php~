@@ -1,0 +1,50 @@
+<?php
+
+namespace Admin\TestBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Budget
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Admin\TestBundle\Entity\BudgetRepository")
+ */
+class Budget
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+    /**
+     * @var decimal
+     *
+     * @ORM\Column(name="PF_Rub_group_annee_budget", type="decimal", precision=10, scale=3)
+     */
+    private $PF_Rub_group_annee_budget;
+
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Annee", inversedBy="commande")
+     * joinColumn(name=id_Annee, referencedColumnName="id")
+     * @ORM\Column(nullable=false)
+     */
+    private $Annee;
+    /**
+     * @ORM\ManyToOne(targetEntity="Rubrique", inversedBy="commande")
+     * joinColumn(name=id_Rubrique, referencedColumnName="id")
+     * @ORM\Column(nullable=false)
+     */
+    private $Rubrique;
+    /**
+     * @ORM\ManyToOne(targetEntity="Groupe_De_Produit", inversedBy="commande")
+     * joinColumn(name=id_Groupe_De_depence, referencedColumnName="id")
+     * @ORM\Column(nullable=false)
+     */
+    private $G_P;
+
+}

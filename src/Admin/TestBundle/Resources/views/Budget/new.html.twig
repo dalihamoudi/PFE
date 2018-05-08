@@ -1,0 +1,84 @@
+{% block body -%}
+    <button type="button" style="position: absolute;left: 85%;top: 11%;" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg1">Ajouter Depence</button>
+
+
+    <div class="modal fade bs-example-modal-lg1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg1">
+            <div class="modal-content">
+
+                <!-- header modal -->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+
+                <!-- body modal -->
+                <div class="modal-body">
+                    <center><h1>Creation Depence</h1></center>
+                        <div>
+                            <label>PF_Rub_group_annee_budget</label>
+                            {{ form_widget(form.PF_Rub_group_annee_budget, {'attr': {'class': 'form-control pointer required'}}) }}
+                        </div>
+                        <div>
+                            <label>Annee</label>
+                            {{ form_widget(form.Annee, {'attr': {'class': 'form-control pointer required'}}) }}
+                        </div>
+                        <div>
+                            <label>Rubrique</label>
+                            {{ form_widget(form.Rubrique, {'attr': {'class': 'form-control pointer required'}}) }}
+                        </div>
+                        <div>
+                            <label>G_P</label>
+                            {{ form_widget(form.G_P, {'attr': {'class': 'form-control pointer required'}}) }}
+                        </div>
+                        <center>
+                            <p>
+                            <div>
+                                {{ form_widget(form.submit, {'attr': {'class': 'btn btn-primary'}}) }}
+                            </div>
+                            </p>
+                        </center>
+                    {{ form_end(form) }}
+                    <center>
+                        <p>
+                        <div>
+                            {{ form_widget(form.submit, {'attr': {'class': 'btn btn-primary'}}) }}
+                        </div>
+                        </p>
+                    </center>
+                </div>
+                {{ form_rest(form) }}
+                {{ form_end(form) }}
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+
+    <script>
+        var add = function() {
+
+            var index = $('table tbody tr').length + Math.floor((Math.random() * 100) + 1);
+            var row = $('script[type="text/html"]').text().replace(/__name__/g, index%2==0?index++:index--);
+            $('#NvRow').append(row);
+        };
+
+        $('table tbody a').live('click', function(event) {
+            if ($(this).text() === "Add") {
+                add();
+            }
+
+            if ($(this).text() === "Remove") {
+                $(this).closest('tr').remove();
+            }
+            event.preventDefault();
+        });
+
+        if ($('table tbody tr').length === 0) {
+            add();
+        }
+    </script>
+{% endblock %}
+
+

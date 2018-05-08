@@ -55,7 +55,7 @@
         <nav id="sideNav"><!-- MAIN MENU -->
             <ul class="nav nav-list">
                 <li class="active"><!-- dashboard -->
-                    <a class="dashboard" href="base.html.twig"><!-- warning - url used by default by ajax (if eneabled) -->
+                    <a class="dashboard" href="{{ path('cmd_ind')}}"><!-- warning - url used by default by ajax (if eneabled) -->
                         <i class="main-icon fa fa-dashboard"></i> <span>Menu</span>
                     </a>
                 </li>
@@ -77,7 +77,7 @@
                         <i class="main-icon fa fa-table"></i> <span>Depence Budget</span>
                     </a>
                     <ul><!-- submenus -->
-                        <li><a href="graphs-flot.html">Afficher</a></li>
+                        <li><a href="{{ path('budget') }}">Afficher</a></li>
                         <li><a href="graphs-morris.html">Ajouter</a></li>
                         <li><a href="graphs-inline.html">Modifier</a></li>
                         <li><a href="graphs-chartjs.html">Supprimer</a></li>

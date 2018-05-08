@@ -2,7 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a56f2d6c-3073-4eea-9abe-5082752aec09" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/budget.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/cmd.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Admin/TestBundle/Controller/BudgetController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Admin/TestBundle/Controller/DepenceBudgetController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Admin/TestBundle/Entity/Budget.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Admin/TestBundle/Entity/BudgetRepository.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Admin/TestBundle/Entity/DepenceBudget.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Admin/TestBundle/Entity/DepenceBudgetRepository.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Admin/TestBundle/Entity/Etat.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Admin/TestBundle/Entity/EtatRepository.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Admin/TestBundle/Form/BudgetType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Admin/TestBundle/Form/DepenceBudgetType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/Budget/edit.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/Budget/index.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/Budget/new.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/Budget/show.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/DepenceBudget/edit.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/DepenceBudget/index.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/DepenceBudget/new.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/DepenceBudget/show.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/cmd/ind.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Admin/TestBundle/Tests/Controller/BudgetControllerTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Admin/TestBundle/Tests/Controller/DepenceBudgetControllerTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/ind.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/TestBundle/Controller/cmdController.php" afterPath="$PROJECT_DIR$/src/Admin/TestBundle/Controller/cmdController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/cmd/index.html.twig" afterPath="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/cmd/index.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/cmd/show.html.twig" afterPath="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/cmd/show.html.twig" />
     </list>
@@ -30,21 +56,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="cmd.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Entity/cmd.php">
+      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/cmd/show.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="164" column="10" lean-forward="false" selection-start-line="164" selection-start-column="7" selection-end-line="164" selection-end-column="10" />
+            <state relative-caret-position="425">
+              <caret line="79" column="22" lean-forward="false" selection-start-line="59" selection-start-column="12" selection-end-line="79" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#262#0#Twig" expanded="false" />
+                <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/DepenceBudget/show.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="89" column="6" lean-forward="false" selection-start-line="89" selection-start-column="6" selection-end-line="89" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#278#0#Twig" expanded="false" />
+                <element signature="n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#th#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#4;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#2852#2858#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#th#5;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#3188#3194#0#HTML" expanded="true" />
+                <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/DepenceBudget/new.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cmdType.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Form/cmdType.php">
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/DepenceBudget/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+            <state relative-caret-position="203">
+              <caret line="31" column="26" lean-forward="false" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -62,17 +121,11 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pencil</find>
-      <find>search</find>
-      <find>k</find>
-      <find>rec</find>
-      <find>5</find>
       <find>all</find>
       <find>section</find>
       <find>fooT</find>
       <find>fooTableInit</find>
       <find>fooTable</find>
-      <find>edit</find>
       <find>delg</find>
       <find>del</find>
       <find>block</find>
@@ -92,24 +145,16 @@
       <find>new</find>
       <find>gra</find>
       <find>get</find>
+      <find>menu</find>
+      <find>Reset Styles</find>
+      <find>im</find>
+      <find>et</find>
+      <find>etat</find>
+      <find>edit</find>
     </findStrings>
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="php app/console doctrine:schema:update --force" />
-      <command text="php app/console doctrine:generate:entities AdminTestBundle:cmd" />
-      <command text="php app/console doctrine:generate:entities AdminTestBundle:DetailCmd" />
-      <command text="php app/console doctrine:schema:update --force" />
-      <command text="php app/console doctrine:generate:entities AdminTestBundle:DetailCmd" />
-      <command text="php app/console doctrine:generate:entities AdminTestBundle:cmd" />
-      <command text="php app/console doctrine:schema:update --force" />
-      <command text="php app/console doctrine:generate:entities AdminTestBundle:cmd" />
-      <command text="php app/console doctrine:generate:entities AdminTestBundle:Delegue" />
-      <command text="php app/console doctrine:schema:update --force" />
-      <command text="php app/console generate:doctrine:crud " />
-      <command text="php app/console doctrine:generate:entities AdminTestBundle:cmd" />
-      <command text="php app/console doctrine:schema:update --force" />
-      <command text="php app/console doctrine:generate:entities AdminTestBundle:DetailCmd" />
       <command text="php app/console doctrine:generate:entities AdminTestBundle:GroupeProduit" />
       <command text="php app/console doctrine:schema:update --force" />
       <command text="php app/console doctrine:generate:entities AdminTestBundle:DetailCmd" />
@@ -121,6 +166,20 @@
       <command text="php app/console doctrine:generate:entities AdminTestBundle:cmd" />
       <command text="php app/console doctrine:generate:entities AdminTestBundle:DetailCmd" />
       <command text="php app/console doctrine:schema:update --force" />
+      <command text="php app/console generate:doctrine:entity" />
+      <command text="php app/console doctrine:generate:entities AdminTestBundle:Budget" />
+      <command text="php app/console doctrine:schema:update --force" />
+      <command text="php app/console generate:doctrine:crud " />
+      <command text="php app/console doctrine:schema:update --force" />
+      <command text="php app/console generate:doctrine:entity" />
+      <command text="php app/console doctrine:generate:entities AdminTestBundle:DepenceBudget" />
+      <command text="php app/console doctrine:schema:update --force" />
+      <command text="php app/console generate:doctrine:entity" />
+      <command text="php app/console doctrine:generate:entities AdminTestBundle:Etat" />
+      <command text="php app/console doctrine:schema:update --force" />
+      <command text="php app/console generate:doctrine:entity" />
+      <command text="php app/console doctrine:schema:update --force" />
+      <command text="php app/console generate:doctrine:crud " />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -132,7 +191,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/Default/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/Default/kiki.html.twig" />
         <option value="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/Default/ajout.html.twig" />
         <option value="$PROJECT_DIR$/../employee/application/config/database.php" />
@@ -170,10 +228,20 @@
         <option value="$PROJECT_DIR$/src/Admin/TestBundle/Entity/cmd.php" />
         <option value="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/cmd/new.html.twig" />
         <option value="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/cmd/newD.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/src/Admin/TestBundle/Controller/cmdController.php" />
+        <option value="$PROJECT_DIR$/web/css/ind.css" />
+        <option value="$PROJECT_DIR$/src/Admin/TestBundle/Entity/Budget.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/cmd/ind.html.twig" />
+        <option value="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/Budget/new.html.twig" />
+        <option value="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/Budget/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Admin/TestBundle/Entity/Etat.php" />
+        <option value="$PROJECT_DIR$/src/Admin/TestBundle/Entity/DepenceBudget.php" />
         <option value="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/cmd/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/cmd/show.html.twig" />
+        <option value="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/DepenceBudget/show.html.twig" />
+        <option value="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/DepenceBudget/new.html.twig" />
+        <option value="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/DepenceBudget/index.html.twig" />
       </list>
     </option>
   </component>
@@ -239,7 +307,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -252,6 +319,19 @@
               <item name="NewProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="NewProject" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="NewProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NewProject" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="NewProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NewProject" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="NewProject" type="b2602c69:ProjectViewProjectNode" />
@@ -320,12 +400,44 @@
               <item name="TestBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Budget" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="NewProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NewProject" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="TestBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="cmd" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="NewProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NewProject" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="TestBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="DepenceBudget" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="NewProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NewProject" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="NewProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NewProject" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -336,12 +448,13 @@
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp\www\NewProject\src\Admin\TestBundle\Resources\assets" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\NewProject\web\images" />
       <recent name="C:\wamp\www\NewProject\web" />
       <recent name="C:\wamp\www\NewProject\src\Admin\TestBundle\Resources\views\Default" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\NewProject\src\Admin\TestBundle\Resources\assets" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -373,23 +486,23 @@
       <workItem from="1520628995335" duration="113000" />
       <workItem from="1520943524441" duration="49281000" />
       <workItem from="1521221017468" duration="81771000" />
-      <workItem from="1524767686346" duration="37478000" />
+      <workItem from="1524767686346" duration="39413000" />
+      <workItem from="1525694530814" duration="19719000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214788000" />
+    <option name="totallyTimeSpent" value="236442000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27231467" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27609682" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6786325" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7641026" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -398,6 +511,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.7623932" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -417,128 +531,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Symfony/Templates/Smarty_V1.1.2/HTML/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="12" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="934" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Entity/cmdRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Entity/ClientRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/Client/new.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Entity/Commune.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Symfony/Templates/Smarty_V1.1.2/HTML/tables-datatable-advanced.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="4082" column="48" lean-forward="false" selection-start-line="4082" selection-start-column="45" selection-end-line="4082" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Symfony/Templates/Smarty_V1.1.2/HTML/assets/css/layout-footable-minimal.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Symfony/Templates/Smarty_V1.1.2/HTML/tables-footable.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1751">
-          <caret line="379" column="127" lean-forward="false" selection-start-line="379" selection-start-column="127" selection-end-line="379" selection-end-column="127" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Symfony/Templates/Smarty_V1.1.2/HTML/assets/css/layout-nestable.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="24" column="6" lean-forward="false" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Symfony/Templates/Smarty_V1.1.2/HTML/assets/css/layout-RTL.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="111" column="24" lean-forward="false" selection-start-line="111" selection-start-column="24" selection-end-line="111" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Symfony/Templates/Smarty_V1.1.2/HTML/assets/plugins/footable/css/footable.core.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-29">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Symfony/Templates/Smarty_V1.1.2/HTML/assets/plugins/footable/css/footable.core.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="57" lean-forward="false" selection-start-line="0" selection-start-column="57" selection-end-line="0" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Symfony/Templates/Smarty_V1.1.2/HTML/assets/plugins/footable/css/footable.metro.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-29">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Symfony/Templates/Smarty_V1.1.2/HTML/assets/plugins/footable/css/footable.standalone.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="33" column="7" lean-forward="false" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/Default/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/Default/ajout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -625,7 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -633,7 +624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -641,7 +631,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="14" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -658,7 +647,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -668,7 +656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="122" column="76" lean-forward="false" selection-start-line="122" selection-start-column="76" selection-end-line="122" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -724,34 +711,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Entity/cmd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="164" column="10" lean-forward="false" selection-start-line="164" selection-start-column="7" selection-end-line="164" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/cmd/acceuil.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="28" column="4" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/cmd/acceuil.html.twig" />
     <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/cmd/newD.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1190">
@@ -760,59 +723,217 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/cmd/new.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Form/cmdType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/cmd/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="39" lean-forward="false" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+        <state relative-caret-position="17">
+          <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/cmd/show.html.twig">
+    <entry file="file://$PROJECT_DIR$/web/images/cmd.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Entity/cmd.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="23" column="25" lean-forward="false" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#262#0#Twig" expanded="false" />
-            <element signature="n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
+        <state relative-caret-position="2600">
+          <caret line="164" column="10" lean-forward="false" selection-start-line="164" selection-start-column="7" selection-end-line="164" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Controller/cmdController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="104" column="20" lean-forward="false" selection-start-line="104" selection-start-column="20" selection-end-line="104" selection-end-column="20" />
+        <state relative-caret-position="16">
+          <caret line="187" column="22" lean-forward="false" selection-start-line="187" selection-start-column="22" selection-end-line="187" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/ind.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="79" column="47" lean-forward="false" selection-start-line="79" selection-start-column="47" selection-end-line="79" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Entity/Budget.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="158" column="33" lean-forward="false" selection-start-line="158" selection-start-column="33" selection-end-line="158" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/cmd/ind.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="54" lean-forward="false" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+          <folding>
+            <element signature="e#195#214#0#HTML" expanded="false" />
+            <element signature="e#279#311#0#HTML" expanded="false" />
+            <element signature="e#473#493#0#HTML" expanded="false" />
+            <element signature="e#561#593#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Controller/BudgetController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1632">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/cmd/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="76" column="40" lean-forward="false" selection-start-line="67" selection-start-column="24" selection-end-line="76" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Form/BudgetType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Entity/Etat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/Budget/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="15" column="16" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Form/DepenceBudgetType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="27" column="33" lean-forward="false" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/Budget/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-493">
+          <caret line="4" column="16" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="58" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Entity/DepenceBudget.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="369" column="0" lean-forward="false" selection-start-line="369" selection-start-column="0" selection-end-line="369" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/cmd/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="138" column="102" lean-forward="false" selection-start-line="138" selection-start-column="77" selection-end-line="138" selection-end-column="102" />
+        <state relative-caret-position="221">
+          <caret line="133" column="90" lean-forward="false" selection-start-line="132" selection-start-column="19" selection-end-line="133" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/cmd/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="83" lean-forward="false" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/Budget/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/DepenceBudget/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/cmd/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="79" column="22" lean-forward="false" selection-start-line="59" selection-start-column="12" selection-end-line="79" selection-end-column="22" />
           <folding>
-            <element signature="n#div#0;n#!!top" expanded="false" />
-            <element signature="n#tr#0;n#table#0;n#!!top" expanded="false" />
+            <element signature="e#0#262#0#Twig" expanded="false" />
+            <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Form/cmdType.php">
+    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Controller/DepenceBudgetController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        <state relative-caret-position="203">
+          <caret line="129" column="52" lean-forward="false" selection-start-line="129" selection-start-column="34" selection-end-line="129" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/DepenceBudget/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="89" column="6" lean-forward="false" selection-start-line="89" selection-start-column="6" selection-end-line="89" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#278#0#Twig" expanded="false" />
+            <element signature="n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#4;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#2852#2858#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#th#5;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#3188#3194#0#HTML" expanded="true" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/DepenceBudget/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/DepenceBudget/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="31" column="26" lean-forward="false" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
           <folding />
         </state>
       </provider>

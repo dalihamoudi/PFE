@@ -1,0 +1,96 @@
+<?php
+
+namespace Admin\TestBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * DepenceBudget
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Admin\TestBundle\Entity\DepenceBudgetRepository")
+ */
+class DepenceBudget
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="PF_DEPENCE_BUDGET_OBJ", type="string", length=100)
+     */
+    private $pFDEPENCEBUDGETOBJ;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="PF_DEPENCE_BUDGET_DESC", type="string", length=255)
+     */
+    private $pFDEPENCEBUDGETDESC;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="PF_DEPENCE_BUDGET_date", type="date")
+     */
+    private $pFDEPENCEBUDGETDate;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="PF_DEPENCE_BUDGET_fac_date", type="date")
+     */
+    private $pFDEPENCEBUDGETFacDate;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="PF_DEPENCE_BUDGET_Number", type="string", length=255)
+     */
+    private $pFDEPENCEBUDGETNumber;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="PF_DEPENCE_BUDGET_Fac_Number", type="string", length=255)
+     */
+    private $pFDEPENCEBUDGETFacNumber;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="PF_DEPENCE_BUDGET_PRIX_HT", type="decimal", precision=3, scale=0)
+     */
+    private $pFDEPENCEBUDGETPRIXHT;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="PF_DEPENCE_BUDGET_QTE", type="integer")
+     */
+    private $pFDEPENCEBUDGETQTE;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="PF_DEPENCE_BUDGET_TTC", type="decimal", precision=3, scale=0)
+     */
+    private $pFDEPENCEBUDGETTTC;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Admin\TestBundle\Entity\etat", inversedBy="DepenceBudget")
+     */
+    private $etats;
+    /**
+     * @ORM\ManyToOne(targetEntity="Admin\TestBundle\Entity\GroupeDeProduit", inversedBy="DepenceBudget")
+     */
+    private $Groupe_De_Produits;
+}
+

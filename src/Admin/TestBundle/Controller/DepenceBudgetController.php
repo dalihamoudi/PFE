@@ -7,21 +7,21 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-use Admin\TestBundle\Entity\cmd;
-use Admin\TestBundle\Form\cmdType;
+use Admin\TestBundle\Entity\DepenceBudget;
+use Admin\TestBundle\Form\DepenceBudgetType;
 
 /**
- * cmd controller.
+ * DepenceBudget controller.
  *
- * @Route("/cmd")
+ * @Route("/depencebudget")
  */
-class cmdController extends Controller
+class DepenceBudgetController extends Controller
 {
 
     /**
-     * Lists all cmd entities.
+     * Lists all DepenceBudget entities.
      *
-     * @Route("/", name="cmd")
+     * @Route("/", name="depencebudget")
      * @Method("GET")
      * @Template()
      */
@@ -29,22 +29,22 @@ class cmdController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('AdminTestBundle:cmd')->findAll();
+        $entities = $em->getRepository('AdminTestBundle:DepenceBudget')->findAll();
 
         return array(
             'entities' => $entities,
         );
     }
     /**
-     * Creates a new cmd entity.
+     * Creates a new DepenceBudget entity.
      *
-     * @Route("/", name="cmd_create")
+     * @Route("/", name="depencebudget_create")
      * @Method("POST")
-     * @Template("AdminTestBundle:cmd:new.html.twig")
+     * @Template("AdminTestBundle:DepenceBudget:new.html.twig")
      */
     public function createAction(Request $request)
     {
-        $entity = new cmd();
+        $entity = new DepenceBudget();
         $form = $this->createCreateForm($entity);
         $form->handleRequest($request);
 
@@ -53,7 +53,7 @@ class cmdController extends Controller
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('cmd', array('id' => $entity->getId())));
+            return $this->redirect($this->generateUrl('depencebudget_show', array('id' => $entity->getId())));
         }
 
         return array(
@@ -63,66 +63,34 @@ class cmdController extends Controller
     }
 
     /**
-     * Creates a form to create a cmd entity.
+     * Creates a form to create a DepenceBudget entity.
      *
-     * @param cmd $entity The entity
+     * @param DepenceBudget $entity The entity
      *
      * @return \Symfony\Component\Form\Form The form
      */
-    private function createCreateForm(cmd $entity)
+    private function createCreateForm(DepenceBudget $entity)
     {
-        $form = $this->createForm(new cmdType(), $entity, array(
-            'action' => $this->generateUrl('cmd_create'),
+        $form = $this->createForm(new DepenceBudgetType(), $entity, array(
+            'action' => $this->generateUrl('depencebudget_create'),
             'method' => 'POST',
         ));
 
-
+        $form->add('submit', 'submit', array('label' => 'Create'));
 
         return $form;
     }
 
     /**
-     * Displays a form to create a new cmd entity.
+     * Displays a form to create a new DepenceBudget entity.
      *
-     * @Route("/new", name="cmd_new")
+     * @Route("/new", name="depencebudget_new")
      * @Method("GET")
      * @Template()
      */
     public function newAction()
     {
-        $entity = new cmd();
-        $form   = $this->createCreateForm($entity);
-
-        return array(
-            'entity' => $entity,
-            'form'   => $form->createView(),
-        );
-    }
-//this Route to Show Page_Ajouter with Design
-    /**
-     * @Route("/newD", name="cmd_newD")
-     * @Method("GET")
-     * @Template()
-     */
-    public function newDAction()
-    {
-        $entity = new cmd();
-        $form   = $this->createCreateForm($entity);
-
-        return array(
-            'entity' => $entity,
-            'form'   => $form->createView(),
-        );
-    }
-//Cette Route pour la page d'acceuil
-    /**
-     * @Route("/ind", name="cmd_ind")
-     * @Method("GET")
-     * @Template()
-     */
-    public function indAction()
-    {
-        $entity = new cmd();
+        $entity = new DepenceBudget();
         $form   = $this->createCreateForm($entity);
 
         return array(
@@ -131,11 +99,10 @@ class cmdController extends Controller
         );
     }
 
-
     /**
-     * Finds and displays a cmd entity.
+     * Finds and displays a DepenceBudget entity.
      *
-     * @Route("/{id}", name="cmd_show")
+     * @Route("/{id}", name="depencebudget_show")
      * @Method("GET")
      * @Template()
      */
@@ -143,10 +110,10 @@ class cmdController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('AdminTestBundle:cmd')->find($id);
+        $entity = $em->getRepository('AdminTestBundle:DepenceBudget')->find($id);
 
         if (!$entity) {
-            throw $this->createNotFoundException('Unable to find cmd entity.');
+            throw $this->createNotFoundException('Unable to find DepenceBudget entity.');
         }
 
         $deleteForm = $this->createDeleteForm($id);
@@ -158,9 +125,9 @@ class cmdController extends Controller
     }
 
     /**
-     * Displays a form to edit an existing cmd entity.
+     * Displays a form to edit an existing DepenceBudget entity.
      *
-     * @Route("/edit/{id}", name="cmd_edit")
+     * @Route("/{id}/edit", name="depencebudget_edit")
      * @Method("GET")
      * @Template()
      */
@@ -168,10 +135,10 @@ class cmdController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('AdminTestBundle:cmd')->find($id);
+        $entity = $em->getRepository('AdminTestBundle:DepenceBudget')->find($id);
 
         if (!$entity) {
-            throw $this->createNotFoundException('Unable to find cmd entity.');
+            throw $this->createNotFoundException('Unable to find DepenceBudget entity.');
         }
 
         $editForm = $this->createEditForm($entity);
@@ -185,16 +152,16 @@ class cmdController extends Controller
     }
 
     /**
-    * Creates a form to edit a cmd entity.
+    * Creates a form to edit a DepenceBudget entity.
     *
-    * @param cmd $entity The entity
+    * @param DepenceBudget $entity The entity
     *
     * @return \Symfony\Component\Form\Form The form
     */
-    private function createEditForm(cmd $entity)
+    private function createEditForm(DepenceBudget $entity)
     {
-        $form = $this->createForm(new cmdType(), $entity, array(
-            'action' => $this->generateUrl('cmd_update', array('id' => $entity->getId())),
+        $form = $this->createForm(new DepenceBudgetType(), $entity, array(
+            'action' => $this->generateUrl('depencebudget_update', array('id' => $entity->getId())),
             'method' => 'PUT',
         ));
 
@@ -203,20 +170,20 @@ class cmdController extends Controller
         return $form;
     }
     /**
-     * Edits an existing cmd entity.
+     * Edits an existing DepenceBudget entity.
      *
-     * @Route("/{id}", name="cmd_update")
+     * @Route("/{id}", name="depencebudget_update")
      * @Method("PUT")
-     * @Template("AdminTestBundle:cmd:edit.html.twig")
+     * @Template("AdminTestBundle:DepenceBudget:edit.html.twig")
      */
     public function updateAction(Request $request, $id)
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('AdminTestBundle:cmd')->find($id);
+        $entity = $em->getRepository('AdminTestBundle:DepenceBudget')->find($id);
 
         if (!$entity) {
-            throw $this->createNotFoundException('Unable to find cmd entity.');
+            throw $this->createNotFoundException('Unable to find DepenceBudget entity.');
         }
 
         $deleteForm = $this->createDeleteForm($id);
@@ -226,7 +193,7 @@ class cmdController extends Controller
         if ($editForm->isValid()) {
             $em->flush();
 
-            return $this->redirect($this->generateUrl('cmd_edit', array('id' => $id)));
+            return $this->redirect($this->generateUrl('depencebudget_edit', array('id' => $id)));
         }
 
         return array(
@@ -236,9 +203,9 @@ class cmdController extends Controller
         );
     }
     /**
-     * Deletes a cmd entity.
+     * Deletes a DepenceBudget entity.
      *
-     * @Route("/{id}", name="cmd_delete")
+     * @Route("/{id}", name="depencebudget_delete")
      * @Method("DELETE")
      */
     public function deleteAction(Request $request, $id)
@@ -248,21 +215,21 @@ class cmdController extends Controller
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $entity = $em->getRepository('AdminTestBundle:cmd')->find($id);
+            $entity = $em->getRepository('AdminTestBundle:DepenceBudget')->find($id);
 
             if (!$entity) {
-                throw $this->createNotFoundException('Unable to find cmd entity.');
+                throw $this->createNotFoundException('Unable to find DepenceBudget entity.');
             }
 
             $em->remove($entity);
             $em->flush();
         }
 
-        return $this->redirect($this->generateUrl('cmd'));
+        return $this->redirect($this->generateUrl('depencebudget'));
     }
 
     /**
-     * Creates a form to delete a cmd entity by id.
+     * Creates a form to delete a DepenceBudget entity by id.
      *
      * @param mixed $id The entity id
      *
@@ -271,7 +238,7 @@ class cmdController extends Controller
     private function createDeleteForm($id)
     {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('cmd_delete', array('id' => $id)))
+            ->setAction($this->generateUrl('depencebudget_delete', array('id' => $id)))
             ->setMethod('DELETE')
             ->add('submit', 'submit', array('label' => 'Delete'))
             ->getForm()

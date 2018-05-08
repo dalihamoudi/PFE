@@ -1,0 +1,53 @@
+<?php
+
+namespace Admin\TestBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Etat
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Admin\TestBundle\Entity\EtatRepository")
+ */
+class Etat
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Admin\TestBundle\Entity\DepenceBudget", mappedBy="Etats")
+     * ORM\JoinColumn(nullable=true)
+     */
+    private $DepenceBudget;
+
+    /**
+     * @return mixed
+     */
+    public function getDepenceBudget()
+    {
+        return $this->DepenceBudget;
+    }
+
+    /**
+     * @param mixed $DepenceBudget
+     */
+    public function setDepenceBudget($DepenceBudget)
+    {
+        $this->DepenceBudget = $DepenceBudget;
+    }
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="PF_ETAT_LIB", type="string", length=20)
+     */
+    private $pFETATLIB;
+
+}
+

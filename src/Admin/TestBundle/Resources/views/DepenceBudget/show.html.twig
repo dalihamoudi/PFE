@@ -1,0 +1,91 @@
+{% block stylesheets %}
+    <!-- CORE CSS -->
+    <link href="{{ asset('plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <!-- THEME CSS -->
+    <link href="{{ asset('css/essentials.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+{% block body -%}
+<button type="button" style="color: #0d6aad" class="glyphicon glyphicon-trash" data-toggle="modal" data-target=".bs-example-modal-lg2{{ entity.id }}"></button>
+
+<div class="modal fade bs-example-modal-lg2{{ entity.id }}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg2{{ entity.id }}">
+        <div class="modal-content">
+
+            <!-- header modal -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+
+            <!-- body modal -->
+            <div class="modal-body">
+                <center>
+                    <h2 style="color:rgba(11,8,18,0.99)">Do You Want To Delete This Depence ?</h2>
+                </center>
+
+    <table class="record_properties">
+        <tbody>
+            <tr class="ui-jqgrid-labels" role="rowheader">
+                <th id="jqgrid_id" role="columnheader" style="width: 100px;color: black;border-bottom: double;>
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                <div id="jqgh_jqgrid_id" class="ui-jqgrid-sortable">Groupe de produit
+                </div>
+                </th>
+                <th id="jqgrid_date" role="columnheader" style="width: 100px;color: black;border-bottom: double;>
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                <div id="jqgh_jqgrid_date" class="ui-jqgrid-sortable">Date
+                </div>
+                </th>
+                <th id="jqgrid_name" role="columnheader" style="width: 100px;color: black;border-bottom: double;>
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                <div id="jqgh_jqgrid_name" class="ui-jqgrid-sortable">Number
+                </div>
+                </th>
+                <th id="jqgrid_amount" role="columnheader" style="width: 100px;color: black;border-bottom: double;>
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                <div id="jqgh_jqgrid_amount" class="ui-jqgrid-sortable">Prix Ht
+                </div>
+                </th> <th id="jqgrid_amount" role="columnheader" style="width: 100px;color: black;border-bottom: double;>
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                <div id="jqgh_jqgrid_amount" class="ui-jqgrid-sortable">Quantité
+                </div>
+                </th> <th id="jqgrid_amount" role="columnheader" style="width: 100px;color: black;border-bottom: double;>
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                <div id="jqgh_jqgrid_amount" class="ui-jqgrid-sortable">Valeur
+                </div>
+                </th>
+            </tr>
+            <tr>
+                <td>{{ entity.GroupeProduits}}</td>
+                <td>{{ entity.pFDEPENCEBUDGETDate|date('Y-m-d H:i:s')}}</td>
+                <td>{{ entity.pFDEPENCEBUDGETNumber}}</td>
+                <td>{{ entity.pFDEPENCEBUDGETPRIXHT}}</td>
+                <td>{{ entity.pFDEPENCEBUDGETQTE}}</td>
+                <td>{{ entity.pFDEPENCEBUDGETPRIXHT*entity.pFDEPENCEBUDGETQTE }}</td>
+            </tr>
+        </tbody>
+    </table>
+     <div>
+         <div class="col-sm-3">
+                    <a href="{{ path('depencebudget') }}" class="btn btn-default btn-featured btn-inverse">
+                        <span>Cancel</span>
+                        <i class="glyphicon glyphicon-remove"></i>
+                    </a>
+                </div>
+                <div class="col-sm-3">
+                    <a href="" class="btn btn-danger btn-featured">
+                        <span>{{ form(delete_form) }}</span>
+                        <i class="glyphicon glyphicon-trash"></i>
+                    </a>
+                </div>
+                <div class="col-sm-3">
+                    <a href="{{ path('depencebudget_edit', { 'id': entity.id }) }}" class="btn btn-warning btn-featured">
+                        <span>Edit</span>
+                        <i class="glyphicon glyphicon-pencil"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

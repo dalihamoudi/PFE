@@ -40,7 +40,7 @@
         {% for entity in entities %}
             <tr>
                 <td>
-                  
+
                     {{ render(controller('AdminTestBundle:DepenceBudget:show',{'id':entity.id})) }}
                 </td>
                 <td>{{ entity.GroupeProduits}}</td>

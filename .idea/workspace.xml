@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a56f2d6c-3073-4eea-9abe-5082752aec09" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/TestBundle/Entity/DepenceBudget.php" afterPath="$PROJECT_DIR$/src/Admin/TestBundle/Entity/DepenceBudget.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/TestBundle/Entity/Etat.php" afterPath="$PROJECT_DIR$/src/Admin/TestBundle/Entity/Etat.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/DepenceBudget/index.html.twig" afterPath="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/DepenceBudget/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/DepenceBudget/new.html.twig" afterPath="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/DepenceBudget/new.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/DepenceBudget/show.html.twig" afterPath="$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/DepenceBudget/show.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -80,7 +77,7 @@
         <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/DepenceBudget/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="214">
-              <caret line="42" column="18" lean-forward="false" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+              <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -90,7 +87,7 @@
         <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Entity/DepenceBudget.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="442">
-              <caret line="341" column="1" lean-forward="true" selection-start-line="341" selection-start-column="1" selection-end-line="341" selection-end-column="1" />
+              <caret line="341" column="1" lean-forward="false" selection-start-line="341" selection-start-column="1" selection-end-line="341" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -514,12 +511,12 @@
       <workItem from="1520943524441" duration="49281000" />
       <workItem from="1521221017468" duration="81771000" />
       <workItem from="1524767686346" duration="39413000" />
-      <workItem from="1525694530814" duration="22527000" />
+      <workItem from="1525694530814" duration="23124000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="239250000" />
+    <option name="totallyTimeSpent" value="239847000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -948,7 +945,7 @@
     <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Entity/DepenceBudget.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
-          <caret line="341" column="1" lean-forward="true" selection-start-line="341" selection-start-column="1" selection-end-line="341" selection-end-column="1" />
+          <caret line="341" column="1" lean-forward="false" selection-start-line="341" selection-start-column="1" selection-end-line="341" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -956,7 +953,7 @@
     <entry file="file://$PROJECT_DIR$/src/Admin/TestBundle/Resources/views/DepenceBudget/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
-          <caret line="42" column="18" lean-forward="false" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
         </state>
       </provider>

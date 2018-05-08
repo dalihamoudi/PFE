@@ -114,4 +114,10 @@ class Etat
     {
         $this->DepenceBudget->removeElement($depenceBudget);
     }
+
+    public function __toString ()
+    {
+     return $this->getPFETATLIB();
+    }
+
 }

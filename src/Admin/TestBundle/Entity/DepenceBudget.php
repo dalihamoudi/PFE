@@ -253,7 +253,7 @@ class DepenceBudget
      * @param string $pFDEPENCEBUDGETPRIXHT
      *
      * @return DepenceBudget
-     */
+b     */
     public function setPFDEPENCEBUDGETPRIXHT($pFDEPENCEBUDGETPRIXHT)
     {
         $this->pFDEPENCEBUDGETPRIXHT = $pFDEPENCEBUDGETPRIXHT;

@@ -62,25 +62,23 @@
                 <li>
                     <a href="#">
                         <i class="fa fa-menu-arrow pull-right"></i>
-                        <i class="main-icon fa fa-bar-chart-o"></i> <span>Commande Pharmacie</span>
+                        <i class="main-icon fa fa-table"></i> <span>Commande Pharmacie</span>
                     </a>
                     <ul><!-- submenus -->
                         <li><a href="{{ path('cmd')}}">Afficher</a></li>
                         <li><a href="{{ path('cmd_newD')}}">Ajouter</a></li>
-                        <li><a href="{{ path('cmd')}}">Modifier</a></li>
-                        <li><a href="{{ path('cmd')}}">Supprimer</a></li>
+
                     </ul>
                 </li>
                 <li>
                     <a href="#">
                         <i class="fa fa-menu-arrow pull-right"></i>
-                        <i class="main-icon fa fa-table"></i> <span>Depence Budget</span>
+                        <i class="main-icon fa fa-bar-chart-o"></i> <span>Depence Budget</span>
                     </a>
                     <ul><!-- submenus -->
                         <li><a href="{{ path('depencebudget')}}">Afficher</a></li>
                         <li><a href="{{ path('depencebudget') }}">Ajouter</a></li>
-                        <li><a href="graphs-inline.html">Modifier</a></li>
-                        <li><a href="graphs-chartjs.html">Supprimer</a></li>
+
                     </ul>
                 </li>
             </ul>
@@ -89,16 +87,38 @@
             <h3>MORE</h3>
             <ul class="nav nav-list">
                 <li>
-                    <a href="calendar.html">
-                        <i class="main-icon fa fa-calendar"></i>
-                        <span class="label label-warning pull-right">2</span> <span>Calendar</span>
+                    <a href="#">
+                        <i class="fa fa-menu-arrow pull-right"></i>
+                        <i class="fa fa-ambulance"></i> <span>clients</span>
                     </a>
+                    <ul><!-- submenus -->
+                        <li><a href="{{ path('client')}}">Afficher</a></li>
+                        <li><a href="{{ path('client')}}">Ajouter</a></li>
+
+                    </ul>
                 </li>
                 <li>
-                    <a href="../../HTML/start.html">
-                        <i class="main-icon fa fa-link"></i>
-                        <span class="label label-danger pull-right">PRO</span> <span>Frontend</span>
+                    <a href="#">
+                        <i class="fa fa-menu-arrow pull-right"></i>
+                        <i class="glyphicon glyphicon-user"></i> <span>Delegues</span>
                     </a>
+                    <ul><!-- submenus -->
+                        <li><a href="{{ path('delegue')}}">Afficher</a></li>
+                        <li><a href="{{ path('delegue')}}">Ajouter</a></li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-menu-arrow pull-right"></i>
+                        <i class="et-basket"></i> <span>Produits</span>
+                    </a>
+                    <ul><!-- submenus -->
+                        <li><a href="{{ path('produit')}}">Afficher</a></li>
+                        <li><a href="{{ path('produit')}}">Ajouter</a></li>
+
+
+                    </ul>
                 </li>
             </ul>
 

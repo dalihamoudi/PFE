@@ -1,16 +1,42 @@
-{% extends '::base.html.twig' %}
-
 {% block body -%}
-    <h1>Client edit</h1>
+<button type="button" style="color: #0d6aad" class="glyphicon glyphicon-pencil" data-toggle="modal" data-target=".bs-example-modal-lg{{ entity.id }}"></button>
 
-    {{ form(edit_form) }}
+<div class="modal fade bs-example-modal-lg{{ entity.id }}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg{{ entity.id }}">
+        <div class="modal-content">
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('client') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
+            <!-- header modal -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+
+            <!-- body modal -->
+            <div class="modal-body">
+                <center><h1>Edit CMD</h1></center>
+                {{ form_start(edit_form) }}
+                <p>
+                <div>
+                    <label>LIBELLE</label>
+                    {{ form_widget(edit_form.pFPharLib, {'attr': {'class': 'form-control pointer required'}})}}
+                </div>
+                <div>
+                    <label>ADRESSE</label>
+                    {{ form_widget(edit_form.pFPharAdresse, {'attr': {'class': 'form-control pointer required'}}) }}
+                </div>
+                <div>
+                    <label>NOM</label>
+                    {{ form_widget(edit_form.pFPharNom, {'attr': {'class': 'form-control pointer required'}}) }}
+                </div>
+                <div>
+                    <label>PRENOM</label>
+                    {{ form_widget(edit_form.pFPharPrenom, {'attr': {'class': 'form-control pointer required'}}) }}
+                </div>
+
+                <div>
+                    <label>DATE</label>
+                    {{ form_widget(edit_form.pFPharDateMaj) }}
+                </div>
+
+
+            </div></div></div></div>
 {% endblock %}

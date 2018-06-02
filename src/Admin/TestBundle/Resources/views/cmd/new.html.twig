@@ -31,27 +31,6 @@
                             {{ form_widget(form.delgues, {'attr': {'class': 'form-control pointer required'}}) }}
                         </div>
 
-
-                    {% macro prototype(detail) %}
-                    <tr>
-                        <td>
-                            {{ form_widget(Detail.grpProduit) }}
-                        </td>
-                        <td>
-                            {{ form_widget(Detail.specialitesD) }}
-                        </td>
-                        <td>
-                            <ul>
-                                <li><a href="#">Add</a></li>
-                                <li><a href="#">Remove</a></li>
-                            </ul>
-                        </td>
-                    </tr>
-                    {% endmacro %}
-
-
-
-
                     <table>
                         <thead>
                         <tr>

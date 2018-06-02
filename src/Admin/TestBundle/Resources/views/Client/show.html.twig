@@ -1,7 +1,20 @@
-{% extends '::base.html.twig' %}
-
 {% block body -%}
-    <h1>Client</h1>
+<button type="button" style="color: #0d6aad" class="glyphicon glyphicon-trash" data-toggle="modal" data-target=".bs-example-modal-lg2{{ entity.id }}"></button>
+
+<div class="modal fade bs-example-modal-lg2{{ entity.id }}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg2{{ entity.id }}">
+        <div class="modal-content">
+
+            <!-- header modal -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+
+            <!-- body modal -->
+            <div class="modal-body">
+                <center>
+                    <h2 style="color:rgba(11,8,18,0.99)">Voulez vous supprimer ce Client ?</h2>
+                </center>
 
     <table class="record_properties">
         <tbody>
@@ -29,20 +42,34 @@
                 <th>Pfphardatemaj</th>
                 <td>{{ entity.pFPharDateMaj|date('Y-m-d H:i:s') }}</td>
             </tr>
+        <tr>
+            <div>
+                <div class="col-sm-3">
+                    <a href="{{ path('client') }}" class="btn btn-default btn-featured btn-inverse">
+                        <span>Cancel</span>
+                        <i class="glyphicon glyphicon-remove"></i>
+                    </a>
+                </div>
+                <div class="col-sm-3">
+                    <a href="" class="btn btn-danger btn-featured">
+                        <span>{{ form(delete_form) }}</span>
+                        <i class="glyphicon glyphicon-trash"></i>
+                    </a>
+                </div>
+                <div class="col-sm-3">
+                    <a href="{{ path('client_edit', { 'id': entity.id }) }}" class="btn btn-warning btn-featured">
+                        <span>Edit</span>
+                        <i class="glyphicon glyphicon-pencil"></i>
+                    </a>
+                </div>
+            </div>
+        </tr>
         </tbody>
     </table>
 
+
+
         <ul class="record_actions">
-    <li>
-        <a href="{{ path('client') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>
-        <a href="{{ path('client_edit', { 'id': entity.id }) }}">
-            Edit
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
+
 </ul>
 {% endblock %}

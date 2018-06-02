@@ -126,4 +126,10 @@ class Diplome
     {
         $this->delegues->removeElement($delegue);
     }
+
+    public function __toString ()
+    {
+        return (string)$this->getId();
+    }
+
 }

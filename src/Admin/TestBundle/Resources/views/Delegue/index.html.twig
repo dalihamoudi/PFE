@@ -5,22 +5,117 @@
 
     <table class="records_list">
         <thead>
-            <tr>
-                <th>Id</th>
-                <th>Pfnom</th>
-                <th>Pfprenom</th>
-                <th>Pfdateemb</th>
-                <th>Pfdatesortie</th>
-                <th>Pftel</th>
-                <th>Pfemail</th>
-                <th>Pfphoto</th>
-                <th>Pfcommentaire</th>
-                <th>Pflogin</th>
-                <th>Pfhashpwd</th>
-                <th>Pforantoption</th>
-                <th>Pfetat</th>
-                <th>Actions</th>
-            </tr>
+
+            <tr class="ui-jqgrid-labels" role="rowheader">
+                <th id="jqgrid_id" role="columnheader" style="width: 100px;color: black;>
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                <div id="jqgh_jqgrid_id" class="ui-jqgrid-sortable">ID DELEGUE
+                    <span class="s-ico" style="">
+                                        <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                        <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                    </span>
+                </div>
+                </th>
+                <th id="jqgrid_id" role="columnheader" style="width: 100px;color: black;>
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                <div id="jqgh_jqgrid_id" class="ui-jqgrid-sortable">NOM
+                    <span class="s-ico" style="">
+                                        <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                        <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                    </span>
+                </div>
+                </th>
+                <th id="jqgrid_id" role="columnheader" style="width: 100px;color: black;>
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                <div id="jqgh_jqgrid_id" class="ui-jqgrid-sortable">PRENOM
+                    <span class="s-ico" style="">
+                                        <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                        <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                    </span>
+                </div>
+                </th>
+
+                <th id="jqgrid_id" role="columnheader" style="width: 100px;color: black;>
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                <div id="jqgh_jqgrid_id" class="ui-jqgrid-sortable">DATE EMB
+                    <span class="s-ico" style="">
+                                        <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                        <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                    </span>
+                </div>
+                </th>
+
+                <th id="jqgrid_id" role="columnheader" style="width: 100px;color: black;>
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                <div id="jqgh_jqgrid_id" class="ui-jqgrid-sortable">DATE SORTIE
+                    <span class="s-ico" style="">
+                                        <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                        <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                    </span>
+                </div>
+                </th>
+
+                <th id="jqgrid_id" role="columnheader" style="width: 100px;color: black;>
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                <div id="jqgh_jqgrid_id" class="ui-jqgrid-sortable">TEL
+                    <span class="s-ico" style="">
+                                        <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                        <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                    </span>
+                </div>
+                </th>
+
+                <th id="jqgrid_id" role="columnheader" style="width: 100px;color: black;>
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                <div id="jqgh_jqgrid_id" class="ui-jqgrid-sortable">EMAIL
+                    <span class="s-ico" style="">
+                                        <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                        <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                    </span>
+                </div>
+                </th>
+
+                <th id="jqgrid_id" role="columnheader" style="width: 100px;color: black;>
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                <div id="jqgh_jqgrid_id" class="ui-jqgrid-sortable">LOGIN
+                    <span class="s-ico" style="">
+                                        <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                        <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                    </span>
+                </div>
+                </th>
+
+                <th id="jqgrid_id" role="columnheader" style="width: 100px;color: black;>
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                <div id="jqgh_jqgrid_id" class="ui-jqgrid-sortable">PASSWORD
+                    <span class="s-ico" style="">
+                                        <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                        <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                    </span>
+                </div>
+                </th>
+
+                <th id="jqgrid_id" role="columnheader" style="width: 100px;color: black;>
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                <div id="jqgh_jqgrid_id" class="ui-jqgrid-sortable"ORANT OPTION
+                    <span class="s-ico" style="">
+                                        <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                        <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                    </span>
+                </div>
+                </th>
+
+                <th id="jqgrid_id" role="columnheader" style="width: 100px;color: black;>
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                <div id="jqgh_jqgrid_id" class="ui-jqgrid-sortable">ETAT
+                    <span class="s-ico" style="">
+                                        <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                        <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                    </span>
+                </div>
+                </th>
+
+
         </thead>
         <tbody>
         {% for entity in entities %}
@@ -32,20 +127,14 @@
                 <td>{% if entity.pFDateSortie %}{{ entity.pFDateSortie|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{{ entity.pFTel }}</td>
                 <td>{{ entity.pFEmail }}</td>
-                <td>{{ entity.pFPhoto }}</td>
-                <td>{{ entity.pFCommentaire }}</td>
                 <td>{{ entity.pFLogin }}</td>
                 <td>{{ entity.pFHashPWD }}</td>
                 <td>{{ entity.pFOrantOption }}</td>
                 <td>{{ entity.pFEtat }}</td>
                 <td>
                 <ul>
-                    <li>
-                        <a href="{{ path('delegue_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('delegue_edit', { 'id': entity.id }) }}">edit</a>
-                    </li>
+                    {{ render(controller('Admin\TestBundle:delegue:edit',{'id':entity.id})) }}
+                    {{ render(controller('Admin\TestBundle:delegue:show',{'id':entity.id})) }}
                 </ul>
                 </td>
             </tr>
@@ -53,11 +142,4 @@
         </tbody>
     </table>
 
-        <ul>
-        <li>
-            <a href="{{ path('delegue_new') }}">
-                Create a new entry
-            </a>
-        </li>
-    </ul>
     {% endblock %}

@@ -2,18 +2,72 @@
 
 {% block body -%}
     <h1>Client list</h1>
+    {{ render(controller('Admin\TestBundle:client:new')) }}
 
-    <table class="records_list">
+
+    <table class="table table-striped table-bordered table-hover" id="sample_2">
         <thead>
-            <tr>
-                <th>Id</th>
-                <th>Pfpharlib</th>
-                <th>Pfpharadresse</th>
-                <th>Pfpharnom</th>
-                <th>Pfpharprenom</th>
-                <th>Pfphardatemaj</th>
-                <th>Actions</th>
-            </tr>
+        <tr class="ui-jqgrid-labels" role="rowheader">
+            <th id="jqgrid_id" role="columnheader" style="width: 100px;color: black;>
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+            <div id="jqgh_jqgrid_id" class="ui-jqgrid-sortable">ID CLIENT
+                <span class="s-ico" style="">
+                                        <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                        <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                    </span>
+            </div>
+            </th>
+            <th id="jqgrid_date" role="columnheader" style="width: 100px;color: black;>
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+            <div id="jqgh_jqgrid_date" class="ui-jqgrid-sortable">LIBELLE
+                <span class="s-ico" style="display:none">
+                        <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                        <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                    </span>
+            </div>
+            <th id="jqgrid_name" role="columnheader" style="width: 100px;color: black;>
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+            <div id="jqgh_jqgrid_name" class="ui-jqgrid-sortable">ADRESSE
+                <span class="s-ico" style="display:none">
+                                    <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                    <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                </span>
+            </div>
+
+            </th>
+            </th>
+            <th id="jqgrid_name" role="columnheader" style="width: 100px;color: black;>
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+            <div id="jqgh_jqgrid_name" class="ui-jqgrid-sortable">NOM
+                <span class="s-ico" style="display:none">
+                                    <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                    <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                </span>
+            </div>
+
+            </th>
+            <th id="jqgrid_name" role="columnheader" style="width: 100px;color: black;>
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+            <div id="jqgh_jqgrid_name" class="ui-jqgrid-sortable">PRENOM
+                <span class="s-ico" style="display:none">
+                                    <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                    <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                </span>
+            </div>
+
+            </th>
+            <th id="jqgrid_amount" role="columnheader" style="width: 100px;color: black;>
+                <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+            <div id="jqgh_jqgrid_amount" class="ui-jqgrid-sortable">DATE MAJ
+                <span class="s-ico" style="display:none">
+                                        <span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span>
+                                        <span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span>
+                                    </span>
+            </div>
+            </th>
+
+        </tr>
+
         </thead>
         <tbody>
         {% for entity in entities %}
@@ -26,12 +80,9 @@
                 <td>{% if entity.pFPharDateMaj %}{{ entity.pFPharDateMaj|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>
                 <ul>
-                    <li>
-                        <a href="{{ path('client_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                       s
-                    </li>
+
+                        {{ render(controller('Admin\TestBundle:client:edit',{'id':entity.id})) }}
+                        {{ render(controller('Admin\TestBundle:client:show',{'id':entity.id})) }}
                 </ul>
                 </td>
             </tr>
@@ -39,11 +90,5 @@
         </tbody>
     </table>
 
-        <ul>
-        <li>
-            <a href="{{ path('client_new') }}">
-                Create a new entry
-            </a>
-        </li>
-    </ul>
+
     {% endblock %}

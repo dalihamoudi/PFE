@@ -1,15 +1,45 @@
-{% extends '::base.html.twig' %}
-
 {% block body -%}
-    <h1>Client creation</h1>
+    <button type="button" style="position: absolute;left: 85%;top: 11%;" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg1">Ajouter CMD</button>
 
-    {{ form(form) }}
+<div class="modal fade bs-example-modal-lg1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg1">
+        <div class="modal-content">
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('client') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
+            <!-- header modal -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+
+            <!-- body modal -->
+            <div class="modal-body">
+                <center><h1>Creation Client</h1></center>
+
+                {{ form_start(form) }}
+
+                <p>
+                    <div>
+                        <label>LIBELLE</label>
+                        {{ form_widget(form.pFPharLib, {'attr': {'class': 'form-control pointer required'}})}}
+                    </div>
+                <div>
+                    <label>ADRESSE</label>
+                    {{ form_widget(form.pFPharAdresse, {'attr': {'class': 'form-control pointer required'}}) }}
+                </div>
+                <div>
+                    <label>NOM</label>
+                    {{ form_widget(form.pFPharNom, {'attr': {'class': 'form-control pointer required'}}) }}
+                </div>
+                <div>
+                    <label>PRENOM</label>
+                    {{ form_widget(form.pFPharPrenom, {'attr': {'class': 'form-control pointer required'}}) }}
+                </div>
+
+                <div>
+                    <label>DATE</label>
+                    {{ form_widget(form.pFPharDateMaj) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

@@ -1,0 +1,89 @@
+{% extends '::base.html.twig' %}
+{% block body -%}
+    <button type="button" style="position: absolute;left: 85%;top: 11%;" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg1">Ajouter Depence</button>
+
+
+    <div class="modal fade bs-example-modal-lg1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg1">
+            <div class="modal-content">
+
+                <!-- header modal -->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+
+                <!-- body modal -->
+                <div class="modal-body">
+                    <center><h1>Creation Depence</h1></center>
+                    <div>
+                        <label>Objet</label>
+                        {{ form_widget(form.pFDEPENCEBUDGETOBJ, {'attr': {'class': 'form-control pointer required'}}) }}
+                    </div>
+                    <div>
+                        <label>Description</label>
+                        {{ form_widget(form.pFDEPENCEBUDGETDESC, {'attr': {'class': 'form-control pointer required'}}) }}
+                    </div>
+                    <div>
+                        <label>Date</label>
+                        {{ form_widget(form.pFDEPENCEBUDGETDate) }}
+                    </div>
+                    <div>
+                        <label>Fac Date</label>
+                        {{ form_widget(form.pFDEPENCEBUDGETFacDate) }}
+                    </div>
+                    <div>
+                        <label>Number</label>
+                        {{ form_widget(form.pFDEPENCEBUDGETNumber, {'attr': {'class': 'form-control pointer required'}}) }}
+                    </div>
+                    <div>
+                        <label>FacNumber</label>
+                        {{ form_widget(form.pFDEPENCEBUDGETFacNumber, {'attr': {'class': 'form-control pointer required'}}) }}
+                    </div>
+                    <div>
+                        <label>PRIXHT</label>
+                        {{ form_widget(form.pFDEPENCEBUDGETPRIXHT, {'attr': {'class': 'form-control pointer required'}}) }}
+                    </div>
+                    <div>
+                        <label>Quantité</label>
+                        {{ form_widget(form.pFDEPENCEBUDGETQTE, {'attr': {'class': 'form-control pointer required'}}) }}
+                    </div>
+                    <div>
+                        <label>TTC</label>
+                        {{ form_widget(form.pFDEPENCEBUDGETTTC, {'attr': {'class': 'form-control pointer required'}}) }}
+                    </div>
+                    <div>
+                        <label>etats</label>
+                        {{ form_widget(form.etats, {'attr': {'class': 'form-control pointer required'}}) }}
+                    </div>
+                    <div>
+                        <label>GroupeProduits</label>
+                        {{ form_widget(form.GroupeProduits, {'attr': {'class': 'form-control pointer required'}}) }}
+                    </div>
+                    <center>
+                        <p>
+                        <div>
+                            {{ form_widget(form.submit, {'attr': {'class': 'btn btn-primary'}}) }}
+                        </div>
+                        </p>
+                    </center>
+                    {{ form_end(form) }}
+                    <center>
+                        <p>
+                        <div>
+                            {{ form_widget(form.submit, {'attr': {'class': 'btn btn-primary'}}) }}
+                        </div>
+                        </p>
+                    </center>
+                </div>
+
+                {{ form_end(form) }}
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+{% endblock %}
+
+

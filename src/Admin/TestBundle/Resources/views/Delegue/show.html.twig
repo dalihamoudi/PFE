@@ -1,0 +1,76 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Delegue</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Pfnom</th>
+                <td>{{ entity.pFNom }}</td>
+            </tr>
+            <tr>
+                <th>Pfprenom</th>
+                <td>{{ entity.pFPrenom }}</td>
+            </tr>
+            <tr>
+                <th>Pfdateemb</th>
+                <td>{{ entity.pFDateEmb|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Pfdatesortie</th>
+                <td>{{ entity.pFDateSortie|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Pftel</th>
+                <td>{{ entity.pFTel }}</td>
+            </tr>
+            <tr>
+                <th>Pfemail</th>
+                <td>{{ entity.pFEmail }}</td>
+            </tr>
+            <tr>
+                <th>Pfphoto</th>
+                <td>{{ entity.pFPhoto }}</td>
+            </tr>
+            <tr>
+                <th>Pfcommentaire</th>
+                <td>{{ entity.pFCommentaire }}</td>
+            </tr>
+            <tr>
+                <th>Pflogin</th>
+                <td>{{ entity.pFLogin }}</td>
+            </tr>
+            <tr>
+                <th>Pfhashpwd</th>
+                <td>{{ entity.pFHashPWD }}</td>
+            </tr>
+            <tr>
+                <th>Pforantoption</th>
+                <td>{{ entity.pFOrantOption }}</td>
+            </tr>
+            <tr>
+                <th>Pfetat</th>
+                <td>{{ entity.pFEtat }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('delegue') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('delegue_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

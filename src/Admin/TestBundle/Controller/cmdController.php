@@ -71,6 +71,7 @@ class cmdController extends Controller
      */
     private function createCreateForm(cmd $entity)
     {
+       
         $form = $this->createForm(new cmdType(), $entity, array(
             'action' => $this->generateUrl('cmd_create'),
             'method' => 'POST',

@@ -1,0 +1,63 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Delegue list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Pfnom</th>
+                <th>Pfprenom</th>
+                <th>Pfdateemb</th>
+                <th>Pfdatesortie</th>
+                <th>Pftel</th>
+                <th>Pfemail</th>
+                <th>Pfphoto</th>
+                <th>Pfcommentaire</th>
+                <th>Pflogin</th>
+                <th>Pfhashpwd</th>
+                <th>Pforantoption</th>
+                <th>Pfetat</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('delegue_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.pFNom }}</td>
+                <td>{{ entity.pFPrenom }}</td>
+                <td>{% if entity.pFDateEmb %}{{ entity.pFDateEmb|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.pFDateSortie %}{{ entity.pFDateSortie|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.pFTel }}</td>
+                <td>{{ entity.pFEmail }}</td>
+                <td>{{ entity.pFPhoto }}</td>
+                <td>{{ entity.pFCommentaire }}</td>
+                <td>{{ entity.pFLogin }}</td>
+                <td>{{ entity.pFHashPWD }}</td>
+                <td>{{ entity.pFOrantOption }}</td>
+                <td>{{ entity.pFEtat }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('delegue_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('delegue_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('delegue_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

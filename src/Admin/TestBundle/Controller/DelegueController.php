@@ -7,21 +7,21 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-use Admin\TestBundle\Entity\DepenceBudget;
-use Admin\TestBundle\Form\DepenceBudgetType;
+use Admin\TestBundle\Entity\Delegue;
+use Admin\TestBundle\Form\DelegueType;
 
 /**
- * DepenceBudget controller.
+ * Delegue controller.
  *
- * @Route("/depencebudget")
+ * @Route("/delegue")
  */
-class DepenceBudgetController extends Controller
+class DelegueController extends Controller
 {
 
     /**
-     * Lists all DepenceBudget entities.
+     * Lists all Delegue entities.
      *
-     * @Route("/", name="depencebudget")
+     * @Route("/", name="delegue")
      * @Method("GET")
      * @Template()
      */
@@ -29,22 +29,22 @@ class DepenceBudgetController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('AdminTestBundle:DepenceBudget')->findAll();
+        $entities = $em->getRepository('AdminTestBundle:Delegue')->findAll();
 
         return array(
             'entities' => $entities,
         );
     }
     /**
-     * Creates a new DepenceBudget entity.
+     * Creates a new Delegue entity.
      *
-     * @Route("/", name="depencebudget_create")
+     * @Route("/", name="delegue_create")
      * @Method("POST")
-     * @Template("AdminTestBundle:DepenceBudget:new.html.twig")
+     * @Template("AdminTestBundle:Delegue:new.html.twig")
      */
     public function createAction(Request $request)
     {
-        $entity = new DepenceBudget();
+        $entity = new Delegue();
         $form = $this->createCreateForm($entity);
         $form->handleRequest($request);
 
@@ -53,7 +53,7 @@ class DepenceBudgetController extends Controller
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('depencebudget_show', array('id' => $entity->getId())));
+            return $this->redirect($this->generateUrl('delegue_show', array('id' => $entity->getId())));
         }
 
         return array(
@@ -63,16 +63,16 @@ class DepenceBudgetController extends Controller
     }
 
     /**
-     * Creates a form to create a DepenceBudget entity.
+     * Creates a form to create a Delegue entity.
      *
-     * @param DepenceBudget $entity The entity
+     * @param Delegue $entity The entity
      *
      * @return \Symfony\Component\Form\Form The form
      */
-    private function createCreateForm(DepenceBudget $entity)
+    private function createCreateForm(Delegue $entity)
     {
-        $form = $this->createForm(new DepenceBudgetType(), $entity, array(
-            'action' => $this->generateUrl('depencebudget_create'),
+        $form = $this->createForm(new DelegueType(), $entity, array(
+            'action' => $this->generateUrl('delegue_create'),
             'method' => 'POST',
         ));
 
@@ -82,15 +82,15 @@ class DepenceBudgetController extends Controller
     }
 
     /**
-     * Displays a form to create a new DepenceBudget entity.
+     * Displays a form to create a new Delegue entity.
      *
-     * @Route("/new", name="depencebudget_new")
+     * @Route("/new", name="delegue_new")
      * @Method("GET")
      * @Template()
      */
     public function newAction()
     {
-        $entity = new DepenceBudget();
+        $entity = new Delegue();
         $form   = $this->createCreateForm($entity);
 
         return array(
@@ -99,30 +99,10 @@ class DepenceBudgetController extends Controller
         );
     }
 
-//this Route to Show Page_Ajouter with Design
     /**
-     * Displays a form to create a new DepenceBudget entity.
+     * Finds and displays a Delegue entity.
      *
-     * @Route("/newD", name="depencebudget_newD")
-     * @Method("GET")
-     * @Template()
-     */
-    public function newDAction()
-    {
-        $entity = new DepenceBudget();
-        $form   = $this->createCreateForm($entity);
-
-        return array(
-            'entity' => $entity,
-            'form'   => $form->createView(),
-        );
-    }
-
-
-    /**
-     * Finds and displays a DepenceBudget entity.
-     *
-     * @Route("/{id}", name="depencebudget_show")
+     * @Route("/{id}", name="delegue_show")
      * @Method("GET")
      * @Template()
      */
@@ -130,10 +110,10 @@ class DepenceBudgetController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('AdminTestBundle:DepenceBudget')->find($id);
+        $entity = $em->getRepository('AdminTestBundle:Delegue')->find($id);
 
         if (!$entity) {
-            throw $this->createNotFoundException('Unable to find DepenceBudget entity.');
+            throw $this->createNotFoundException('Unable to find Delegue entity.');
         }
 
         $deleteForm = $this->createDeleteForm($id);
@@ -145,9 +125,9 @@ class DepenceBudgetController extends Controller
     }
 
     /**
-     * Displays a form to edit an existing DepenceBudget entity.
+     * Displays a form to edit an existing Delegue entity.
      *
-     * @Route("/{id}/edit", name="depencebudget_edit")
+     * @Route("/{id}/edit", name="delegue_edit")
      * @Method("GET")
      * @Template()
      */
@@ -155,10 +135,10 @@ class DepenceBudgetController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('AdminTestBundle:DepenceBudget')->find($id);
+        $entity = $em->getRepository('AdminTestBundle:Delegue')->find($id);
 
         if (!$entity) {
-            throw $this->createNotFoundException('Unable to find DepenceBudget entity.');
+            throw $this->createNotFoundException('Unable to find Delegue entity.');
         }
 
         $editForm = $this->createEditForm($entity);
@@ -172,16 +152,16 @@ class DepenceBudgetController extends Controller
     }
 
     /**
-    * Creates a form to edit a DepenceBudget entity.
+    * Creates a form to edit a Delegue entity.
     *
-    * @param DepenceBudget $entity The entity
+    * @param Delegue $entity The entity
     *
     * @return \Symfony\Component\Form\Form The form
     */
-    private function createEditForm(DepenceBudget $entity)
+    private function createEditForm(Delegue $entity)
     {
-        $form = $this->createForm(new DepenceBudgetType(), $entity, array(
-            'action' => $this->generateUrl('depencebudget_update', array('id' => $entity->getId())),
+        $form = $this->createForm(new DelegueType(), $entity, array(
+            'action' => $this->generateUrl('delegue_update', array('id' => $entity->getId())),
             'method' => 'PUT',
         ));
 
@@ -190,20 +170,20 @@ class DepenceBudgetController extends Controller
         return $form;
     }
     /**
-     * Edits an existing DepenceBudget entity.
+     * Edits an existing Delegue entity.
      *
-     * @Route("/{id}", name="depencebudget_update")
+     * @Route("/{id}", name="delegue_update")
      * @Method("PUT")
-     * @Template("AdminTestBundle:DepenceBudget:edit.html.twig")
+     * @Template("AdminTestBundle:Delegue:edit.html.twig")
      */
     public function updateAction(Request $request, $id)
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('AdminTestBundle:DepenceBudget')->find($id);
+        $entity = $em->getRepository('AdminTestBundle:Delegue')->find($id);
 
         if (!$entity) {
-            throw $this->createNotFoundException('Unable to find DepenceBudget entity.');
+            throw $this->createNotFoundException('Unable to find Delegue entity.');
         }
 
         $deleteForm = $this->createDeleteForm($id);
@@ -213,7 +193,7 @@ class DepenceBudgetController extends Controller
         if ($editForm->isValid()) {
             $em->flush();
 
-            return $this->redirect($this->generateUrl('depencebudget_edit', array('id' => $id)));
+            return $this->redirect($this->generateUrl('delegue_edit', array('id' => $id)));
         }
 
         return array(
@@ -223,9 +203,9 @@ class DepenceBudgetController extends Controller
         );
     }
     /**
-     * Deletes a DepenceBudget entity.
+     * Deletes a Delegue entity.
      *
-     * @Route("/{id}", name="depencebudget_delete")
+     * @Route("/{id}", name="delegue_delete")
      * @Method("DELETE")
      */
     public function deleteAction(Request $request, $id)
@@ -235,21 +215,21 @@ class DepenceBudgetController extends Controller
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $entity = $em->getRepository('AdminTestBundle:DepenceBudget')->find($id);
+            $entity = $em->getRepository('AdminTestBundle:Delegue')->find($id);
 
             if (!$entity) {
-                throw $this->createNotFoundException('Unable to find DepenceBudget entity.');
+                throw $this->createNotFoundException('Unable to find Delegue entity.');
             }
 
             $em->remove($entity);
             $em->flush();
         }
 
-        return $this->redirect($this->generateUrl('depencebudget'));
+        return $this->redirect($this->generateUrl('delegue'));
     }
 
     /**
-     * Creates a form to delete a DepenceBudget entity by id.
+     * Creates a form to delete a Delegue entity by id.
      *
      * @param mixed $id The entity id
      *
@@ -258,7 +238,7 @@ class DepenceBudgetController extends Controller
     private function createDeleteForm($id)
     {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('depencebudget_delete', array('id' => $id)))
+            ->setAction($this->generateUrl('delegue_delete', array('id' => $id)))
             ->setMethod('DELETE')
             ->add('submit', 'submit', array('label' => 'Delete'))
             ->getForm()

@@ -95,9 +95,10 @@
                     </div>
 
 		<!-- JAVASCRIPT FILES -->
-		<script type="text/javascript">var plugin_path = '/dali/web/assets/plugins/';</script>
-		<script type="text/javascript" src="/dali/web/assets/plugins/jquery/jquery-2.1.4.min.js"></script>
-		<script type="text/javascript" src="/dali/web/assets/js/app.js"></script>
+		
+		<script type="text/javascript">var plugin_path = '{{ asset('plugins/') }}';</script>
+		<script type="text/javascript" src="{{ asset('plugins/jquery/jquery-2.1.4.min.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
 
 		<!-- PAGE LEVEL SCRIPTS -->
 		<script type="text/javascript">
@@ -110,13 +111,10 @@
 
 									if (jQuery().dataTable) {
 
-										// Datatable with TableTools
 										function initTable1() {
 											var table = jQuery('#sample_1');
 
-											/* Table tools samples: https://www.datatables.net/release-datatables/extras/TableTools/ */
 
-											/* Set tabletools buttons and button container */
 
 											jQuery.extend(true, jQuery.fn.DataTable.TableTools.classes, {
 												"container": "btn-group pull-right tabletools-topbar",

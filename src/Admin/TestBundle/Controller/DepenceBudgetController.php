@@ -29,11 +29,40 @@ class DepenceBudgetController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('AdminTestBundle:DepenceBudget')->findAll();
+        $new = array();
 
+        $entities = $em->getRepository('AdminTestBundle:DepenceBudget')->findAll();
+        $totalsByDate = [];
+        for($m=1; $m<=12; ++$m){
+            $totalsByDate[date('F', mktime(0, 0, 0, $m, 1))]=0;
+        }
+        foreach ($entities as $element)
+            if (($date = date("F",$element->getPFDEPENCEBUDGETDate()->getTimestamp())) and is_numeric($element->getPFDEPENCEBUDGETPRIXHT())) {
+                if ( ! isset($totalsByDate[$date])) {
+                    $totalsByDate[$date] = 0;
+                }
+            $totalsByDate[$date]=$totalsByDate[$date]+$element->getPFDEPENCEBUDGETPRIXHT();
+
+        }
+        $listdesmois = [];
+        $listdesvaleurs = [];
+
+        foreach ($totalsByDate as $date => $total) {
+
+            $listdesmois[$date]=$date;
+            $listdesvaleurs[$date]=$total;
+}
+
+
+
+
+        $budget = $em->getRepository('AdminTestBundle:Budget')->findAll();
         return array(
             'entities' => $entities,
-        );
+            'budget' => $budget,
+        'lesmois'=>$listdesmois,
+        'lesvaleurs'=>$listdesvaleurs
+            );
     }
     /**
      * Creates a new DepenceBudget entity.
